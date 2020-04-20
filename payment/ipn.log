@@ -1,0 +1,54 @@
+[2020-04-03 21:49 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1020
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=10.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=Q9YVLZAFC6N8J&address_street=1+Main+St&payment_date=14%3A49%3A46+Apr+03%2C+2020+PDT&payment_status=Completed&charset=windows-1252&address_zip=95131&first_name=John&mc_fee=0.59&address_country_code=US&address_name=John+Doe&notify_version=3.9&custom=&payer_status=verified&business=sb-e8vhx1286796%40business.example.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=ANhQmkzbhzX8LlDMjKVKPG3LJCdaAC45X9J8ZNaDUxE8HV0-gAVIMWtS&payer_email=sb-hlqit1288597%40personal.example.com&txn_id=79E12169K0070263S&payment_type=instant&last_name=Doe&address_state=CA&receiver_email=sb-e8vhx1286796%40business.example.com&payment_fee=0.59&shipping_discount=0.00&insurance_amount=0.00&receiver_id=6NWEJ2A9JAXEE&txn_type=web_accept&item_name=&discount=0.00&mc_currency=USD&item_number=&residence_country=US&test_ipn=1&shipping_method=Default&transaction_subject=&payment_gross=10.00&ipn_track_id=1b3db525974f0
+[2020-04-03 21:49 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 03 Apr 2020 21:49:55 GMT
+Paypal-Debug-Id: 345a8b0b13b9f
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=OXHmQM7RsrmwWsQVMeFnumb1hH8g69_WHILFfZ0NUB3AwRqlDaZNghunOUkL8i6JZLfMEzmi2cmF7TYgtPl9xATBbm_bLiaWo4BJ7Ts5jXyxSO7om8jek1Xv_XB_2JyI0tGoIXrydRq6xOwvD1tKu6oaftyum6TsB93REZuyqxeqh5m9A_gKdxmVBhsV4-kIFK-O_pzMx4QoOtSFkOBwioWh3LUyan-MIk8ygCVPxVrjIzPhrdM_mTSrtkiPOCNSIrFW-Z0ljmeA6rBVX3_Ds-3mJIkAL4zMEDttMBbG5OfjchEuJXnV0u1yR0rZOc6uOTeJpkCxUuzfmWgkzU_GkK2SarXLSJFOFb2CfPLfZdwtf2HxKKJIMCPVlHB_rXYBgPHr8OCEnwROuZte8ktZlSdNJx9euai3MwILKeOq47HAmyUUGKzAQ-HAs90; Path=/; Domain=paypal.com; HttpOnly; Secure
+Set-Cookie: cookie_check=yes; Path=/; Domain=paypal.com; Expires=Mon, 01 Apr 2030 21:49:56 GMT; HttpOnly; Secure
+Set-Cookie: navcmd=_notify-validate; Path=/; Domain=paypal.com; HttpOnly; Secure
+Set-Cookie: navlns=0.0; Path=/; Domain=paypal.com; Expires=Sun, 03 Apr 2022 21:49:56 GMT; HttpOnly; Secure
+Set-Cookie: Apache=10.72.108.11.1585950595612500; Path=/
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D1585950596%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Path=/; Domain=paypal.com; Expires=Fri, 03 Apr 2020 22:19:56 GMT; HttpOnly; Secure
+Set-Cookie: X-PP-L7=1; Path=/; Domain=paypal.com; Secure
+Vary: Accept-Encoding,User-Agent
+X-Frame-Options: SAMEORIGIN
+Content-Length: 8
+Connection: close
+Strict-Transport-Security: max-age=63072000
+
+VERIFIED
+[2020-04-03 21:54 UTC] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1020
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=10.00&protection_eligibility=Eligible&address_status=confirmed&payer_id=Q9YVLZAFC6N8J&address_street=1+Main+St&payment_date=14%3A53%3A56+Apr+03%2C+2020+PDT&payment_status=Completed&charset=windows-1252&address_zip=95131&first_name=John&mc_fee=0.59&address_country_code=US&address_name=John+Doe&notify_version=3.9&custom=&payer_status=verified&business=sb-e8vhx1286796%40business.example.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=ALdlSsI7zcv-G96fkm7-hNNpdHWMAv6BL9nv53iL7QwKonLfrbj1UzH6&payer_email=sb-hlqit1288597%40personal.example.com&txn_id=65567673J3491174C&payment_type=instant&last_name=Doe&address_state=CA&receiver_email=sb-e8vhx1286796%40business.example.com&payment_fee=0.59&shipping_discount=0.00&insurance_amount=0.00&receiver_id=6NWEJ2A9JAXEE&txn_type=web_accept&item_name=&discount=0.00&mc_currency=USD&item_number=&residence_country=US&test_ipn=1&shipping_method=Default&transaction_subject=&payment_gross=10.00&ipn_track_id=2d279c718e1d5
+[2020-04-03 21:54 UTC] HTTP response of validation request: HTTP/1.1 200 OK
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 03 Apr 2020 21:54:03 GMT
+Paypal-Debug-Id: 42d4af1e90b5d
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=9huskCZSUC4IF56Pgc8vfNFU6iiutZ0Q37SwmJ86McMPrZuIybLzaP_zkysMYQtn9ACdPfbHfvi6IUfJZlBHsTJ-FNkBnLjJYfbrOUzPXL3lRTL84BLSGNiADDR24KjJqJ6aVnR8MzkURdju0xY_Qyvab8Ln7hfV6Go3LqOTryhOLPMDsAB66FKaL0g-T-JWgryovqCYa2kjpg78b_j8gF4BN0dHAzCGemPrTqN4zJLNyvIB_mxw1X_qYg2S5q4DErQJoazRMFmq3wDZB4eUoc-Xa7EcKqkBAm7Y9biG725JgCKr5AFF55f6EIpakbWHmyDnVPK7yYQxkc_lPFzhd91OSe5eTqyHeXbixy6ioeZtOgu4-9Nvga3649iLCkrRbE_Rzj4nJH-WGPoH9HodmkAZtQ2PXlisQJTv8-vHIc5XLxjfvjtM7KYRMGC; Path=/; Domain=paypal.com; HttpOnly; Secure
+Set-Cookie: cookie_check=yes; Path=/; Domain=paypal.com; Expires=Mon, 01 Apr 2030 21:54:04 GMT; HttpOnly; Secure
+Set-Cookie: navcmd=_notify-validate; Path=/; Domain=paypal.com; HttpOnly; Secure
+Set-Cookie: navlns=0.0; Path=/; Domain=paypal.com; Expires=Sun, 03 Apr 2022 21:54:04 GMT; HttpOnly; Secure
+Set-Cookie: Apache=10.72.108.11.1585950843733799; Path=/
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D1585950844%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Path=/; Domain=paypal.com; Expires=Fri, 03 Apr 2020 22:24:04 GMT; HttpOnly; Secure
+Set-Cookie: X-PP-L7=1; Path=/; Domain=paypal.com; Secure
+Vary: Accept-Encoding,User-Agent
+X-Frame-Options: SAMEORIGIN
+Content-Length: 8
+Connection: close
+Strict-Transport-Security: max-age=63072000
+
+VERIFIED
