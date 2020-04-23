@@ -1,4 +1,5 @@
 <?php 
+session_start();
  // Include configuration file 
  include_once 'config.php'; 
 
@@ -21,6 +22,19 @@
 
      $payment_status = $_GET['st']; 
 
+     $username = $_SESSION['username'];
+
+     $name = $_SESSION['name'];
+
+     $surname = $_SESSION['surname'];
+
+     $hash = $_SESSION['hash'];
+
+     $email = $_SESSION['email'];
+
+     $gender = $_SESSION['gender'];
+
+     $age = $_SESSION['age'];
 
      // Get product info from the database 
 
@@ -39,16 +53,18 @@
          $payment_gross = $paymentRow['payment_gross']; 
 
          $payment_status = $paymentRow['payment_status']; 
-
+        
      }
          else 
          { 
 
          // Insert transaction data into the database 
 
-         $insert = $db->query("INSERT INTO payments(txn_id,payment_gross,currency_code,payment_status) VALUES('".$txn_id."','".$payment_gross."','".$currency_code."','".$payment_status."')"); 
+         $insert = $db->query("INSERT INTO payments(txn_id,payment_gross,currency_code,payment_status,username) VALUES('".$txn_id."','".$payment_gross."','".$currency_code."','".$payment_status."','".$username."')"); 
 
          $payment_id = $db->insert_id; 
+
+         $insert2=$db->query("INSERT INTO users (name, surname, age,email,gender,username,password) VALUES ('".$name."', '".$surname."', '".$age."','".$email."','".$gender."','".$username."','".$hash."')");
 
         } 
 
@@ -81,7 +97,7 @@
 
             <p><b>Payment Status:</b> <?php echo $payment_status; ?></p>
 
-                                                         
+                    <p><b>User:</b> <?php echo $username; ?></p>                                      
 
 
         <?php }else{ ?>
