@@ -767,30 +767,15 @@
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="map-location">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33245.297803635964!2d-73.76987401620775!3d40.704774398815005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1575866843291!5m2!1sen!2sbd" style="border:0;" allowfullscreen=""></iframe>
-                        <div class="map-widget">
-                            <i class="fa fa-map-marker"></i>
-                            <div class="map-address">
-                                <img src="img/map-location.jpg" alt="">
-                                <ul class="map-text">
-                                    <li><span>Address:</span> Iris Watson, Box 283, NY</li>
-                                    <li><span>Phone:</span> 12-456-791</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p>Map</p>
                 <div class="col-lg-6">
                     <div class="footer-form set-bg" data-setbg="img/contact-form-bg.jpg">
                         <div class="row">
                             <div class="col-lg-10">
                                 <div class="section-title">
-                                    <h2>Request A Call Back</h2>
-                                    <p>Shape your body and burn fat with strength training. With the right equipment
-                                        such as free weights or resistance machines.</p>
+                                    <h2>Na kontakto/h2>
+                                    <p>“Të jesh fizikisht në gjendje të mirë, nuk ka asgjë tjetër të ju pengojë që të besoni se do të arrini objektivat më të mira për veten tuaj!”
+                                    </p>
                                 </div>
                                 <form action="slack_message.php" method="post">
                                     <div class="row">
@@ -813,7 +798,19 @@
                 </div>
             </div>
         </div>
-      
+        <div class="register normal-register">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-links">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
     </footer>
     <!-- Footer Section End -->
 
