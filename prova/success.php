@@ -7,6 +7,19 @@ session_start();
 
  include_once 'dbConnect.php'; 
 
+//date_default_timezone_set('Central European Summer Time');
+//$date = date('m/d/Y h:i:s a', time());
+//$end_date = $date + 30;
+ $now = new DateTime();
+ $start_date= new DateTime();
+ $start_date = date_format($now,"Y-m-d H:i:s");
+ $end_date=new DateTime();
+ $end=new DateTime();
+ $end=date_add($now,date_interval_create_from_date_string("30 days"));
+ $end_date=date_format($end,"Y-m-d H:i:s");
+ //$end_date = new DateTime(null, new DateTimeZone('America/New_York'));
+ //$end_date->setTimezone(new DateTimeZone('Europe/London')); 
+ //$end_date =  $end_date.AddDays(30);
  // If transaction data is available in the URL 
 
  if (!empty(!empty($_GET['tx']) && !empty($_GET['amt']) && !empty($_GET['cc']) && !empty($_GET['st'])))
@@ -60,7 +73,7 @@ session_start();
 
          // Insert transaction data into the database 
 
-         $insert = $db->query("INSERT INTO payments(txn_id,payment_gross,currency_code,payment_status,username) VALUES('".$txn_id."','".$payment_gross."','".$currency_code."','".$payment_status."','".$username."')"); 
+         $insert = $db->query("INSERT INTO payments(txn_id,payment_gross,currency_code,payment_status,start_date,end_date,username) VALUES('".$txn_id."','".$payment_gross."','".$currency_code."','".$payment_status."','".$start_date."','".$end_date."','".$username."')"); 
 
          $payment_id = $db->insert_id; 
 
