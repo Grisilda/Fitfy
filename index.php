@@ -127,34 +127,34 @@
                     <div class="services-items">
                         <div class="single-service-item">
                             <img src="img/icon-1.png" alt="">
-                            <h5>Weight Lifting</h5>
-                            <p>We have a wide choice of classes that are a great complement to any training programme.
+                            <h5>Example</h5>
+                            <p>Example text.
                             </p>
                         </div>
                         <div class="single-service-item color-1">
                             <img src="img/icon-2.png" alt="">
-                            <h5>Body Building</h5>
-                            <p>We have a wide choice of classes that are a great complement to any training programme.
+                            <h5>Example</h5>
+                            <p>Example text.
                             </p>
                         </div>
                         <div class="single-service-item color-2">
                             <img src="img/icon-3.png" alt="">
-                            <h5>Healthy</h5>
-                            <p>We have a wide choice of classes that are a great complement to any training programme.
+                            <h5>Example</h5>
+                            <p>Example text.
                             </p>
                         </div>
                         <div class="single-service-item color-3">
                             <img src="img/icon-4.png" alt="">
-                            <h5>Yoga</h5>
-                            <p>We have a wide choice of classes that are a great complement to any training programme.
+                            <h5>Example</h5>
+                            <p>Example text.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
-                    <div class="service-video set-bg" data-setbg="img/video-bg.jpg">
+                    <div class="service-video set-bg" data-setbg="img/video.png">
                         <div class="play-btn">
-                            <a href="https://www.youtube.com/watch?v=SlPhMPnQ58k" class="service-video-popup"><i
+                            <a href="img\video1.mp4"  class="service-video-popup"><i
                                     class="fa fa-play"></i></a>
                         </div>
                     </div>
@@ -187,8 +187,7 @@
                         <div class="col-lg-6">
                             <div class="section-title">
                                 <h2>Our Class</h2>
-                                <p>Our fitness experts can help you discover new training techniques and exercises that
-                                    offer a dynamic and efficient full-body workout.</p>
+                                <p>Text</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -203,19 +202,12 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="img/class/1.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
-                                                        <h3>Body Building</h3>
-                                                        <p>Body Building, the original LES MILLS barbell class, will
-                                                            sculpt, tone and strengthen your entire body, fast! Focusing
-                                                            on low weight loads and high repetition movements, you'll
-                                                            burn fat, gain strength and quickly produce lean body muscle
-                                                            conditioning. All the benefits of working with weighs in one
-                                                            action packed, highly physical class. The world’s fastest
-                                                            way to get in shape. Find your Lessmills Bodypump class
-                                                            here.</p>
+                                                        <h3>Text</h3>
+                                                        <p>Some text here</p>
                                                         <a href="#" class="schedule-btn">View Schedule <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
@@ -227,19 +219,12 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="img/class/2.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
-                                                        <h3>Racing runing</h3>
-                                                        <p>Body Building, the original LES MILLS barbell class, will
-                                                            sculpt, tone and strengthen your entire body, fast! Focusing
-                                                            on low weight loads and high repetition movements, you'll
-                                                            burn fat, gain strength and quickly produce lean body muscle
-                                                            conditioning. All the benefits of working with weighs in one
-                                                            action packed, highly physical class. The world’s fastest
-                                                            way to get in shape. Find your Lessmills Bodypump class
-                                                            here.</p>
+                                                        <h3>Text</h3>
+                                                        <p>Some text here</p>
                                                         <a href="#" class="schedule-btn">View Schedule <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
@@ -251,19 +236,12 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="img/class/3.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
-                                                        <h3>Yoga Fitness</h3>
-                                                        <p>Body Building, the original LES MILLS barbell class, will
-                                                            sculpt, tone and strengthen your entire body, fast! Focusing
-                                                            on low weight loads and high repetition movements, you'll
-                                                            burn fat, gain strength and quickly produce lean body muscle
-                                                            conditioning. All the benefits of working with weighs in one
-                                                            action packed, highly physical class. The world’s fastest
-                                                            way to get in shape. Find your Lessmills Bodypump class
-                                                            here.</p>
+                                                        <h3>Text</h3>
+                                                        <p>Some text here</p>
                                                         <a href="#" class="schedule-btn">View Schedule <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
@@ -275,19 +253,12 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="img/class/4.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
-                                                        <h3>Kick boxing</h3>
-                                                        <p>Body Building, the original LES MILLS barbell class, will
-                                                            sculpt, tone and strengthen your entire body, fast! Focusing
-                                                            on low weight loads and high repetition movements, you'll
-                                                            burn fat, gain strength and quickly produce lean body muscle
-                                                            conditioning. All the benefits of working with weighs in one
-                                                            action packed, highly physical class. The world’s fastest
-                                                            way to get in shape. Find your Lessmills Bodypump class
-                                                            here.</p>
+                                                        <h3>Text</h3>
+                                                        <p>Some text here</p>
                                                         <a href="#" class="schedule-btn">View Schedule <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
@@ -299,19 +270,12 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="img/class/5.png" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
-                                                        <h3>Cardio workout</h3>
-                                                        <p>Body Building, the original LES MILLS barbell class, will
-                                                            sculpt, tone and strengthen your entire body, fast! Focusing
-                                                            on low weight loads and high repetition movements, you'll
-                                                            burn fat, gain strength and quickly produce lean body muscle
-                                                            conditioning. All the benefits of working with weighs in one
-                                                            action packed, highly physical class. The world’s fastest
-                                                            way to get in shape. Find your Lessmills Bodypump class
-                                                            here.</p>
+                                                        <h3>Text</h3>
+                                                        <p>Some text here</p>
                                                         <a href="#" class="schedule-btn">View Schedule <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
@@ -323,19 +287,12 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="img/class/6.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
-                                                        <h3>Martial Arts</h3>
-                                                        <p>Body Building, the original LES MILLS barbell class, will
-                                                            sculpt, tone and strengthen your entire body, fast! Focusing
-                                                            on low weight loads and high repetition movements, you'll
-                                                            burn fat, gain strength and quickly produce lean body muscle
-                                                            conditioning. All the benefits of working with weighs in one
-                                                            action packed, highly physical class. The world’s fastest
-                                                            way to get in shape. Find your Lessmills Bodypump class
-                                                            here.</p>
+                                                        <h3>TExt</h3>
+                                                        <p>Some text here</p>
                                                         <a href="#" class="schedule-btn">View Schedule <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
@@ -354,7 +311,7 @@
                                     <li>
                                         <a data-toggle="tab" class="active" href="#class-1" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-1.jpg" alt="">
+                                                <img src="img/class/1.jpg" alt="">
                                                 <h5>Body building</h5>
                                             </div>
                                         </a>
@@ -362,7 +319,7 @@
                                     <li>
                                         <a data-toggle="tab" href="#class-2" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-2.jpg" alt="">
+                                                <img src="img/class/2.jpg" alt="" width="160" height="102.09">
                                                 <h5>Racing runing</h5>
                                             </div>
                                         </a>
@@ -370,7 +327,7 @@
                                     <li>
                                         <a data-toggle="tab" href="#class-3" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-3.jpg" alt="">
+                                                <img src="img/class/3.jpg" alt="" width="160" height="102.09">
                                                 <h5>Yoga Fitness</h5>
                                             </div>
                                         </a>
@@ -378,7 +335,7 @@
                                     <li>
                                         <a data-toggle="tab" href="#class-4" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-4.jpg" alt="">
+                                                <img src="img/class/4.jpg" alt="" width="160" height="102.09">
                                                 <h5>Kick boxing</h5>
                                             </div>
                                         </a>
@@ -386,7 +343,7 @@
                                     <li>
                                         <a data-toggle="tab" href="#class-5" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-5.jpg" alt="">
+                                                <img src="img/class/5.png" alt="" width="160" height="102.09">
                                                 <h5>Cardio workout</h5>
                                             </div>
                                         </a>
@@ -394,7 +351,7 @@
                                     <li>
                                         <a data-toggle="tab" href="#class-6" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-6.jpg" alt="">
+                                                <img src="img/class/6.jpg" alt="" width="160" height="102.09">
                                                 <h5>Martial Arts</h5>
                                             </div>
                                         </a>
@@ -415,8 +372,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Our Trainer</h2>
-                        <p>Our fitness experts can help you discover new training techniques.</p>
+                        <h2>Our Schedule</h2>
+                        <p>Text</p>
                     </div>
                 </div>
             </div>
@@ -438,10 +395,10 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="workout-time">10.00</td>
+                                    <td class="workout-time">time</td>
                                     <td class="gym">
                                         <h6>Gym</h6>
-                                        <span>10.00 - 11.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -449,7 +406,7 @@
                                     <td></td>
                                     <td class="yoga">
                                         <h6>Yoga</h6>
-                                        <span>10.00 - 12.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -457,7 +414,7 @@
                                     <td></td>
                                     <td class="body">
                                         <h6>Body</h6>
-                                        <span>10.00 - 12.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -465,14 +422,14 @@
                                     <td></td>
                                     <td class="cardio">
                                         <h6>Cardio</h6>
-                                        <span>10.00 - 11.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="workout-time">14.00</td>
+                                    <td class="workout-time">time</td>
                                     <td></td>
                                     <td class="running">
                                         <h6>Running</h6>
@@ -484,7 +441,7 @@
                                     <td></td>
                                     <td class="box">
                                         <h6>Box</h6>
-                                        <span>14.00 - 15.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -492,7 +449,7 @@
                                     <td></td>
                                     <td class="gym">
                                         <h6>Gym</h6>
-                                        <span>14.00 - 16.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -500,10 +457,10 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class="workout-time">16.00</td>
+                                    <td class="workout-time">time</td>
                                     <td class="cardio">
                                         <h6>Cardio</h6>
-                                        <span>16.00 - 18.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -511,7 +468,7 @@
                                     <td></td>
                                     <td class="gym">
                                         <h6>Gym</h6>
-                                        <span>16.00 - 19.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -519,7 +476,7 @@
                                     <td></td>
                                     <td class="yoga">
                                         <h6>Yoga</h6>
-                                        <span>16.00 - 18.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -527,24 +484,24 @@
                                     <td></td>
                                     <td class="gym">
                                         <h6>Gym</h6>
-                                        <span>16.00 - 20.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="workout-time">18.00</td>
+                                    <td class="workout-time">time</td>
                                     <td class="box g">
                                         <h6>Box</h6>
-                                        <span>18.00 - 22.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
                                     </td>
                                     <td class="body">
                                         <h6>Body</h6>
-                                        <span>18.00 - 20.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -552,7 +509,7 @@
                                     <td></td>
                                     <td class="crossfit">
                                         <h6>Crossfit</h6>
-                                        <span>18.00 - 21.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -560,7 +517,7 @@
                                     <td></td>
                                     <td class="cardio">
                                         <h6>Cardio</h6>
-                                        <span>18.00 - 22.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -572,14 +529,14 @@
                                     <td></td>
                                     <td class="gym">
                                         <h6>Gym</h6>
-                                        <span>20.00 - 12.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
                                     </td>
                                     <td class="body">
                                         <h6>Body</h6>
-                                        <span>20.00 - 21.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -587,7 +544,7 @@
                                     <td></td>
                                     <td class="cardio">
                                         <h6>Cardio</h6>
-                                        <span>20.00 - 22.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -595,7 +552,7 @@
                                     <td></td>
                                     <td class="crossfit">
                                         <h6>Crossfit</h6>
-                                        <span>20.00 - 21.00</span>
+                                        <span>time</span>
                                         <div class="trainer-name">
                                             John Smith
                                         </div>
@@ -626,15 +583,14 @@
                 <div class="row m-0">
                     <div class="col-lg-4 order-lg-1 p-0">
                         <div class="member-pic first">
-                            <img src="img/trainer-1.jpg" alt="">
+                            <img src="img/trainer/trajner_1.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-2 p-0">
                         <div class="member-text">
-                            <span>Gymer</span>
-                            <h5>Martin Alex</h5>
-                            <p>Body Building, the original LES MILLS barbell class, will sculpt, tone and strengthen
-                                your entire body, fast!</p>
+                            <span>Text</span>
+                            <h5>Name</h5>
+                            <p>Text</p>
                             <div class="member-social">
                                 <a href="#"><i class="ti-facebook"></i></a>
                                 <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -645,15 +601,14 @@
                     </div>
                     <div class="col-lg-4 order-lg-3 p-0">
                         <div class="member-pic second">
-                            <img src="img/trainer-2.jpg" alt="">
+                            <img src="img/trainer/trajner_3.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-6 p-0">
                         <div class="member-text second">
-                            <span>Body Building</span>
-                            <h5>Martin Alex</h5>
-                            <p>Body Building, the original LES MILLS barbell class, will sculpt, tone and strengthen
-                                your entire body, fast!</p>
+                            <span>Text</span>
+                            <h5>Name</h5>
+                            <p>text</p>
                             <div class="member-social">
                                 <a href="#"><i class="ti-facebook"></i></a>
                                 <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -664,15 +619,14 @@
                     </div>
                     <div class="col-lg-4 order-lg-5 p-0">
                         <div class="member-pic third">
-                            <img src="img/trainer-3.jpg" alt="">
+                            <img src="img/trainer/trajner_2.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-4 p-0">
                         <div class="member-text third">
-                            <span>Yoga</span>
-                            <h5>Martin Alex</h5>
-                            <p>Body Building, the original LES MILLS barbell class, will sculpt, tone and strengthen
-                                your entire body, fast!</p>
+                            <span>Text</span>
+                            <h5>Name</h5>
+                            <p>Text</p>
                             <div class="member-social">
                                 <a href="#"><i class="ti-facebook"></i></a>
                                 <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -688,7 +642,7 @@
     <!-- Team Section End -->
 
     <!-- Latest News Section Begin -->
-    <section class="latest-news-section spad">
+  <!--   <section class="latest-news-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -761,22 +715,64 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Latest News Section End -->
 
     <!-- Footer Section Begin -->
+
     <footer class="footer-section">
+
         <div class="container-fluid">
-                <p>Map</p>
+
+            <div class="row">
+
                 <div class="col-lg-6">
+
+                    <div class="map-location">
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.5888017284037!2d19.811742915725354!3d41.31780820826798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE5JzA0LjEiTiAxOcKwNDgnNTAuMSJF!5e0!3m2!1sen!2s!4v1497606026685" style="border:0;" allowfullscreen=""></iframe>
+
+                        <div class="map-widget">
+
+                            <i class="fa fa-map-marker"></i>
+
+                            <div class="map-address">
+
+                                <img src="img/map-location.jpg" alt="">
+
+                                <ul class="map-text">
+
+                                    <li><span>Address:</span> Qendra Olimpia, pranë Postës Nr.8 , Tiranë</li>
+
+                                    <li><span>Phone:</span> 044500333</li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
                     <div class="footer-form set-bg" data-setbg="img/contact-form-bg.jpg">
+
                         <div class="row">
+
                             <div class="col-lg-10">
+
                                 <div class="section-title">
-                                    <h2>Na kontakto/h2>
-                                    <p>“Të jesh fizikisht në gjendje të mirë, nuk ka asgjë tjetër të ju pengojë që të besoni se do të arrini objektivat më të mira për veten tuaj!”
-                                    </p>
+
+                                    <h2>Kontakt</h2>
+
+                                    <p>“Të jesh fizikisht në gjendje të mirë, nuk ka asgjë tjetër të ju pengojë që të
+                                 besoni se do të arrini objektivat më të mira për veten tuaj!”</p>
+
                                 </div>
+
                                 <form action="slack_message.php" method="post">
                                     <div class="row">
                                         <div class="col-lg-6">
@@ -792,26 +788,55 @@
                                         </div>
                                     </div>
                                 </form>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
-        <div class="register normal-register">
+
+        <div class="register">
+
             <div class="container">
+
                 <div class="row">
+
                     <div class="col-lg-12">
+
+                        <div class="copyright">
+
+                        </div>
+
+                        <div class="footer-widget">
+
+                        </div>
+
                         <div class="footer-links">
+
                             <a href="#"><i class="fa fa-facebook"></i></a>
+
                             <a href="#"><i class="fa fa-twitter"></i></a>
+
                             <a href="#"><i class="fa fa-instagram"></i></a>
+
                         </div>
-                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
+
     <!-- Footer Section End -->
 
     <!-- Search model Begin -->
