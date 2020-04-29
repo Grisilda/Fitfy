@@ -1,27 +1,28 @@
 <?php
 session_start();
-	if(isset($_POST["submit"])){
+
 		$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
-		if($_POST["username"]!=null && $_POST["password"]!=null){
+		if($_POST["ussername"]!=null && $_POST["password"]!=null){
 			// echo "Here";
-				$name=$_POST["username"];
+				$name=$_POST["ussername"];
 				$password=$_POST["password"];
 				$_SESSION["name"] = $name;
 				$_SESSION["password"] = $password;
 				$hash = md5($password);
-				$query="Select * from coach where username="."'$name'"." and password="."'$hash'";
-
-				$data=mysqli_query($connect,$query);
-				if(mysqli_num_rows ($data)!=0){
-					header('Location:../../../../index.html');
-					mysql_close($connect);
-				}else{
-					header('Location:../html/logimi.html');
+				$queryUssername="Select * from coach where username="."'$name'";
+				$dataUssername=mysqli_query($connect,$queryUssername);
+				$queryPassword="Select * from coach where password="."'$hash'";
+				$dataPassword=mysqli_query($connect,$queryPassword);
+				setcookie ("member_login",$_POST["remember"],time()+ (10 * 365 * 24 * 60 * 60));
+				if(mysqli_num_rows ($dataUssername)==0){
+					echo "Please check your credintials!";
+				}else if(mysqli_num_rows ($dataUssername)!=0 && mysqli_num_rows ($dataPassword)==0){
+					echo "Your password is incorrect!";
+				}else if(mysqli_num_rows ($dataUssername)!=0 && mysqli_num_rows ($dataPassword)!=0){
+					echo "Sucess";
 				}
 		}else{
-			echo "<script type='text/javascript'>alert('Please fill all the fields!');
-					window.location.href='../html/logimi.html';
-				  </script>";
+			echo "Please fill all the fields!";die;
 		}
-	}
+	
 ?>
