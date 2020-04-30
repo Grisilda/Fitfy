@@ -27,10 +27,3 @@ include_once 'config.php';
 </form>
 </center>
 
-            </div>
-
-
-        </div>
-
-
-</div>
