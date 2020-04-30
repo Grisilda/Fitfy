@@ -10,13 +10,18 @@ session_start();
 //date_default_timezone_set('Central European Summer Time');
 //$date = date('m/d/Y h:i:s a', time());
 //$end_date = $date + 30;
- $now = new DateTime();
- $start_date= new DateTime();
- $start_date = date_format($now,"Y-m-d H:i:s");
- $end_date=new DateTime();
- $end=new DateTime();
- $end=date_add($now,date_interval_create_from_date_string("30 days"));
- $end_date=date_format($end,"Y-m-d H:i:s");
+ //$now = new DateTime();
+ //$start_date= new DateTime();
+ //$start_date = date_format($now,"Y-m-d H:i:s");
+ //date_default_timezone_set('Europe/Tirana');
+ $start_date=date('Y-m-d');
+// $end_date=date('Y-m-d');
+ //$end=date('Y-m-d');
+
+    $end = strtotime("+ 30 days", strtotime($start_date));
+    $end_date= date("Y-m-d", $end);
+ //$end=date_add($now,date_interval_create_from_date_string("30 days"));
+// $end_date=date_format($end,"Y-m-d");
  //$end_date = new DateTime(null, new DateTimeZone('America/New_York'));
  //$end_date->setTimezone(new DateTimeZone('Europe/London')); 
  //$end_date =  $end_date.AddDays(30);
@@ -93,8 +98,8 @@ session_start();
 
     <?php if(!empty($payment_id)){ ?>
 
-
-            <h1 class="success">Your Payment has been Successful</h1>
+           <center>
+            <h1 class="success" style="color: #4BB543">Your Payment has been Successful</h1>
 
                                                          
 
@@ -110,17 +115,20 @@ session_start();
 
             <p><b>Payment Status:</b> <?php echo $payment_status; ?></p>
 
-                    <p><b>User:</b> <?php echo $username; ?></p>                                      
+                    <p><b>User:</b> <?php echo $name; ?></p>                                      
 
 
         <?php }else{ ?>
 
-            <h1 class="error">Your Payment has Failed</h1>
+            <h1 class="error" style="color: red">Your Payment has Failed</h1>
 
         <?php } ?>
+    
+    </div>
+    <div style="text-align: center"> 
 
+    <a style="color: orange; display: inline-block; " href="https://fitfy.000webhostapp.com/" class="btn-link"> <h3>Back to home page</h3></a>
     </div>
 
-    <a href="Pindex.php" class="btn-link">Back </a>
-
 </div>
+</center>
