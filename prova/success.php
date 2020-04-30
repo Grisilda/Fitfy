@@ -7,24 +7,11 @@ session_start();
 
  include_once 'dbConnect.php'; 
 
-//date_default_timezone_set('Central European Summer Time');
-//$date = date('m/d/Y h:i:s a', time());
-//$end_date = $date + 30;
- //$now = new DateTime();
- //$start_date= new DateTime();
- //$start_date = date_format($now,"Y-m-d H:i:s");
- //date_default_timezone_set('Europe/Tirana');
- $start_date=date('Y-m-d');
-// $end_date=date('Y-m-d');
- //$end=date('Y-m-d');
 
-    $end = strtotime("+ 30 days", strtotime($start_date));
-    $end_date= date("Y-m-d", $end);
- //$end=date_add($now,date_interval_create_from_date_string("30 days"));
-// $end_date=date_format($end,"Y-m-d");
- //$end_date = new DateTime(null, new DateTimeZone('America/New_York'));
- //$end_date->setTimezone(new DateTimeZone('Europe/London')); 
- //$end_date =  $end_date.AddDays(30);
+ $start_date=date('Y-m-d');
+ $end = strtotime("+ 30 days", strtotime($start_date));
+ $end_date= date("Y-m-d", $end);
+ 
  // If transaction data is available in the URL 
 
  if (!empty(!empty($_GET['tx']) && !empty($_GET['amt']) && !empty($_GET['cc']) && !empty($_GET['st'])))
