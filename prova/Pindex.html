@@ -9,21 +9,53 @@ include_once 'config.php';
  include_once 'dbConnect.php'; 
 
  ?>
+ <html>
+ <head>
+ 	<style type="text/css">
+ 	body{
+  background: url('fp1.jpg'); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 
+ }
+ /*.logo {
+  background:  url('../img/FitLogo.png');
+  padding: 50px;
+  margin: 1px;
+  width: 100px;
+  height: 150px;
+  background-size: auto;
+  background-repeat: no-repeat;
+}*/
+ </style>
+ </head>
+<body>
 
-
-                                                                    
+                                                              
 
 <!-- PayPal payment form for displaying the buy button -->
-<center>
+<!-- <div class="logo"></div> -->
+<div class="logo">
+                <img src="../img/FitLogo.png" alt="FITFY" width="100px" height="100spx">
+            </div>
+<center style="margin-top: 300px"> 
+  
+	<div style="background-color: purple; width: 500px; height: 200px">
 <h1 style="color: orange"> Click Buy Now to continue with payment </h1>
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" >
-	
+
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" style=" width: 300px; height: 100px;">
+
 <input type="hidden" name="business" value="<?php echo PAYPAL_ID; ?>">     
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="LMXGWPR3NMMSQ">
 <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="width: 270px; height: 80px">
 <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-</center>
 
+</center>
+</div>
+
+  </body>          
+  </html>
