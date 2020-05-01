@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -7,7 +10,7 @@
     <meta name="keywords" content="PONIGYM, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PONIGYM | Template</title>
+    <title>Fitfy Fitness</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
@@ -41,23 +44,27 @@
                 <nav class="mainmenu mobile-menu">
                     <ul>
                         <li><a href="./index.php">Home</a></li>
-                        <li><a href="./about-us.html">About</a></li>
-                        <li><a href="./schedule.html">Schedule</a></li>
-                        <li><a href="./gallery.html">Portfolio</a></li>
-                        <li class="active"><a href="./blog.html">Blog</a>
+                        <li><a href="./about-us.php">About</a></li>
+                        <li><a href="./schedule.php">Schedule</a></li>
+                        <li><a href="./gallery.php">Portfolio</a></li>
+                        <li class="active"><a href="./blog.php">Blog</a>
                             <ul class="dropdown">
-                                <li><a href="blog-details.html">Blog Details</a></li>
+                                <li><a href="blog-details.php">Blog Details</a></li>
                             </ul>
                         </li>
-                        <li><a href="./contact.html">Contacts</a></li>
+                        <li><a href="./contact.php">Contacts</a></li>
                     </ul>
                 </nav>
                 <div class="nav-right search-switch">
                     <i class="ti-search"></i>
                 </div>
-                <div class="nav-right search-switch">
-                    <i class="ti-user"></i>
-                </div>
+                <?php
+    if(isset($_SESSION["name"])){
+       echo '<div class="nav-right">
+       <a class="ti-user" style="color:black" href="/user/profil/profil.html"></a>
+        </div>';       
+    }
+?>
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>
