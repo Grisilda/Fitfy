@@ -6,7 +6,7 @@ session_start();
 			// echo "Here";
 				$name=$_POST["ussername"];
 				$password=$_POST["password"];
-				$_SESSION["name"] = $name;
+				$_SESSION["login"] = $name;
 				$_SESSION["password"] = $password;
 				$hash = md5($password);
 				$queryUssername="Select * from coach where username="."'$name'";
