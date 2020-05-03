@@ -9,7 +9,7 @@ function registerActions() {
 	var passwd=$('#passwd').val();
 	// alert('Pass eshte'+password);
 
-	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$/;
 	if(!email.match(mailformat))
 	{
 		$('#email_errors').html("Please enter a valid email!");
