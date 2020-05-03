@@ -61,7 +61,7 @@ if(mysqli_num_rows ($data)!=0){
 	$mail->SMTPAuth = true;
 	$mail->Username = 'xxxxx@gmail.com'; // email
 	$mail->Password = 'xxxxxx'; // password
-	$mail->setFrom('teacela96@gmail.com', 'Fitfy Fitness'); // From email and name
+	$mail->setFrom('xxxxx@gmail.com', 'Fitfy Fitness'); // From email and name
 	$mail->addAddress($email); // to email and name
 	$mail->Subject = 'Require password';
 	$mail->msgHTML('Hi '.$username.',
