@@ -1,3 +1,3 @@
 <?php
-	$GLOBALS['pass']='kleazemraime';
+	$GLOBALS['pass']='xxxxxx';
 ?>
