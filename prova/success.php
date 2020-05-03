@@ -6,7 +6,10 @@ session_start();
  // Include database connection file 
 
  include_once 'dbConnect.php'; 
+ ?>
 
+<head><title>Fitfy Payment Response</title></head>
+<?php
 //date_default_timezone_set('Central European Summer Time');
 //$date = date('m/d/Y h:i:s a', time());
 //$end_date = $date + 30;
@@ -18,7 +21,7 @@ session_start();
 // $end_date=date('Y-m-d');
  //$end=date('Y-m-d');
 
-    $end = strtotime("+ 30 days", strtotime($start_date));
+    $end = strtotime("+ 31 days", strtotime($start_date));
     $end_date= date("Y-m-d", $end);
  //$end=date_add($now,date_interval_create_from_date_string("30 days"));
 // $end_date=date_format($end,"Y-m-d");
@@ -104,7 +107,7 @@ session_start();
  </style>
  </head>
 <body>
-<div class="logo">
+ <div class="logo">
     <a href="https://fitfy.000webhostapp.com/index.php">
                 <img src="../img/FitLogo.png" alt="FITFY" width="100px" height="100spx"></a>
             </div>
@@ -116,12 +119,14 @@ session_start();
 
                 
            <center >
+
             
             <h1 class="success" style="color: #4BB543; text-align: center; ">Your Payment has been Successful</h1>
 
-                                                         
+                 <div style="background-color: grey; width: 400px;" >                                        
 
             <h4>Payment Information</h4>
+            <p><b>Your payment is done for 30 days</b></p>
 
             <p><b>Reference Number:</b> <?php echo $payment_id; ?></p>
 
@@ -133,8 +138,8 @@ session_start();
 
             <p><b>Payment Status:</b> <?php echo $payment_status; ?></p>
 
-                    <p><b>User:</b> <?php echo $name; ?></p>                                      
-
+            <p><b>User:</b> <?php echo $name." ".$surname; ?></p>                                      
+            </div>
 
         <?php }else{ ?>
            
