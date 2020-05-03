@@ -36,8 +36,7 @@
     <header class="header-section">
         <div class="container">
             <div class="logo">
-            	 <a href="https://fitfy.000webhostapp.com/index.php">
-                <img src="img/FitLogo.png" alt="FITFY" width="100px" height="100spx"></a>
+                <img src="img/FitLogo.png" alt="FITFY" width="100px" height="100spx">
             </div>
             <div class="nav-menu">
                 <nav class="mainmenu mobile-menu">
@@ -58,7 +57,7 @@
                     <i class="ti-search"></i>
                 </div>
 <?php
-    if(isset($_SESSION["name"])){
+    if(isset($_SESSION["login"])){
        echo '<div class="nav-right">
        <a class="ti-user" style="color:#ffffff" href="/user/profil/profil.html"></a>
         </div>';       
@@ -82,7 +81,7 @@
                         <h4>“Train like a beast and look like a beauty”</h4>
                         <h1>Make it <span>Shape</span></h1>
                         <?php
-                            if(!isset($_SESSION["name"])){
+                            if(!isset($_SESSION["login"])){
                                echo '<a href="/user/logimi/html/logimi.html" class="primary-btn" style="margin-right: 20px">Join Us Now</a>
                         <a href="/coach/logimi/html/logimi.html" class="primary-btn">JOIN AS COACH</a>';       
                             }
@@ -115,7 +114,7 @@
     </section>
     <!-- Hero Section End -->
 
-  <!-- Services Section Begin -->
+   <!-- Services Section Begin -->
     <section class="services-section spad">
         <div class="container">
             <div class="row">
@@ -171,16 +170,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Start your Journey with our exciting offers</h2>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="#" class="primary-btn">Join With Us</a>
+                    <h2>The body achieves what the mind believes</h2>
+                    <p>“The clock is ticking. Are you becoming the person you want to be?”</p>
+                    <!-- <a href="#" class="primary-btn">Join With Us</a> -->
                 </div>
             </div>
         </div>
     </section>
     <!-- Cta Section End -->
 
-   <!-- Class Section Begin-->
+    <!-- Class Section Begin-->
     <section class="class-section spad">
         <div class="container">
             <div class="row">
@@ -189,7 +188,7 @@
                         <div class="col-lg-6">
                             <div class="section-title">
                                 <h2>Klast tona</h2>
-                                <p>You Choose</p>
+                                <p>You choose!</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -590,7 +589,7 @@
                     </div>
                     <div class="col-lg-4 order-lg-2 p-0">
                         <div class="member-text">
-                            <span>Everything you want is on the other side of fear!</span>
+                            <span style="font-style: oblique;font-size: 13px;">"Everything you want is on the other side of fear!"</span>
                             <h5>Loris Morina</h5>
                             <p>Pasioni për bodybuilding është i lindur për mua. Sporti është kulturë dhe respekt për veten. Mua më pëlqen të konkuroj dhe kjo është çfarë kam bërë në fitnes. Kombinimi i kardios dhe forcës është çelësi i trajnimit për konkurimin në disiplinën e bikini fitness. Eksperienca është çelesi drejt suksesit. Sporting Club. Asgjë nuk është e pamundur. Çdo gjë është e mundur nëse ju besoni dhe punoni fort për ta arrritur. Dream Big!</p>
                             <div class="member-social">
@@ -608,7 +607,9 @@
                     </div>
                     <div class="col-lg-4 order-lg-6 p-0">
                         <div class="member-text second">
-                            <span>One of the greatest moments in life is realizing that two weeks ago, your body couldn't do what it just did!</span>
+                            <span style="font-style: oblique;font-size: 13px;">"One of the greatest moments in life is realizing that</span>
+                            <span style="font-style: oblique;font-size: 13px;">two weeks ago, your body couldn't do what</span>
+                            <span style="font-style: oblique;font-size: 13px;">it just did!"</span>
                             <h5>Armir Agovi</h5>
                             <p>Puna si instruktor nuk ka të bëjë vetëm me punën e pecs-it. Trajnuesit zotërojnë njohuritë dhe aftësitë e nevojshme për të hartuar programe të sigurta dhe efektive të fitness. Ata udhëzojnë dhe ndihmojnë njerëzit në arritjen e qëllimeve personale të shëndetit dhe të palestër.</p>
                             <div class="member-social">
@@ -626,7 +627,7 @@
                     </div>
                     <div class="col-lg-4 order-lg-4 p-0">
                         <div class="member-text third">
-                            <span>Off the couch, off the carbs</span>
+                            <span style="font-style: oblique;font-size: 13px;">"Off the couch, off the carbs"</span>
                             <h5>Arlind Selimaj</h5>
                             <p>Unë besoj se nëse ju keni mendimin e duhur,me shumë konsistencë dhe pak sakrificë ju mund të bëheni dhe jeni në formë. Fitnesi rrit besimin dhe përqëndrimin tim dhe redukton stresin, gjë e cila më bën mua të kem performanca më të mira në çdo aspekt të jetës time. Gjithçka çfarë duhet është vendosmëri dhe guxim për të ndërmarrë hapin e parë drejt ëndrrës tuaj. Me eksperiencën e jetes time unë mund t’iu ndihmoj ta arrini atë. Ekuilibri është çelesi për një jetë të shëndetshme.</p>
                             <div class="member-social">
@@ -768,10 +769,9 @@
 
                                 <div class="section-title">
 
-                                    <h2>Kontakt</h2>
+                                    <h2>WE WANT TO HEAR FROM YOU</h2>
 
-                                    <p>“Të jesh fizikisht në gjendje të mirë, nuk ka asgjë tjetër të ju pengojë që të
-                                 besoni se do të arrini objektivat më të mira për veten tuaj!”</p>
+                                    <p>Please fill out our form and we'll get in touch shortly.</p>
 
                                 </div>
 
