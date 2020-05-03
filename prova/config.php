@@ -25,6 +25,5 @@
 
  define('DB_NAME', 'id12990860_fitfydb'); 
 
- // Change not required 
 
  define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cgi-bin/webscr":"https://www.paypal.com/cgi-bin/webscr");
