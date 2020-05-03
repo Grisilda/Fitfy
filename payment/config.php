@@ -7,11 +7,11 @@
 
  define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE 
 
- define('PAYPAL_RETURN_URL', 'https://fitfy.000webhostapp.com/prova/success.php'); 
+ define('PAYPAL_RETURN_URL', 'https://fitfy.000webhostapp.com/payment/success.php'); 
 
- define('PAYPAL_CANCEL_URL', 'https://fitfy.000webhostapp.com/cancel.php'); 
+ define('PAYPAL_CANCEL_URL', 'https://fitfy.000webhostapp.com/payment/cancel.php'); 
 
- define('PAYPAL_NOTIFY_URL', 'https://fitfy.000webhostapp.com/prova/ipn.php'); 
+ define('PAYPAL_NOTIFY_URL', 'https://fitfy.000webhostapp.com/payment/ipn.php'); 
 
  define('PAYPAL_CURRENCY', 'USD'); 
 
