@@ -1,11 +1,5 @@
 <?php 
 
- /* 
-3
-* PayPal and database configuration 
-4
-*/ 
-
 
 // PayPal configuration 
 
@@ -13,11 +7,11 @@
 
  define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE 
 
- define('PAYPAL_RETURN_URL', 'http://www.example.com/success.php'); 
+ define('PAYPAL_RETURN_URL', 'https://fitfy.000webhostapp.com/prova/success.php'); 
 
- define('PAYPAL_CANCEL_URL', 'http://www.example.com/cancel.php'); 
+ define('PAYPAL_CANCEL_URL', 'https://fitfy.000webhostapp.com/cancel.php'); 
 
- define('PAYPAL_NOTIFY_URL', 'http://www.example.com/ipn.php'); 
+ define('PAYPAL_NOTIFY_URL', 'https://fitfy.000webhostapp.com/prova/ipn.php'); 
 
  define('PAYPAL_CURRENCY', 'USD'); 
 
