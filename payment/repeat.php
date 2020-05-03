@@ -34,8 +34,8 @@ $mail->Password = 'xxx';
 $mail->setFrom('xxx@gmail.com', 'Fitfy payment'); 
 $mail->addAddress($row2['email']); 
 $mail->Subject = 'Complete payment for next 30 days';
-$mail->msgHTML('Hello!<br> <a href="https://fitfy.000webhostapp.com/prova/Pindex.php" >Please click here to make your payment for  next 30 days </a> <br><br> Thank you, Fitfy team!');
-$mail->AddAttachment('https://fitfy.000webhostapp.com/prova/Pindex.php');
+$mail->msgHTML('Hello!<br> <a href="https://fitfy.000webhostapp.com/payment/Pindex.php" >Please click here to make your payment for  next 30 days </a> <br><br> Thank you, Fitfy team!');
+$mail->AddAttachment('https://fitfy.000webhostapp.com/payment/Pindex.php');
 $mail->AltBody = 'HTML messaging not supported'; 
 
 $mail->SMTPOptions = array(
