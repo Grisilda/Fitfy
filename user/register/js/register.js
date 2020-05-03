@@ -1,43 +1,41 @@
-<?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-session_start();
-		$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
-		// echo $_POST["firstname"];die;
-		if($_POST["firstname"]!=null && $_POST["lastname"]!=null && $_POST["email"]!=null && $_POST["ussername"]!=null && $_POST["gender"]!=null && $_POST["age"]!=null && $_POST["passwd"]!=null){
-				 $name=$_POST["firstname"];
-				 $_SESSION["name"] = $name;
-				 $surname=$_POST["lastname"];
-				 $_SESSION["surname"] = $surname;
-				 $email=$_POST["email"];
-				 $_SESSION["email"] = $email;
-				 $password=$_POST["passwd"];
-				 $age=$_POST["age"];
-				 $_SESSION["age"] = $age;
-				 $ussername=$_POST["ussername"];
-				 $_SESSION["username"] = $ussername;
-				 $gender=$_POST["gender"];
-				 $_SESSION["gender"] = $gender;
-				 $hash = md5($password);
-				 $_SESSION["hash"] = $hash;
-				 // echo $hash;die;
-				 $query="Select * from users where username = "."'$ussername'"." or email = "."'$email'";
-				 $data=mysqli_query($connect,$query);
-				 if(mysqli_num_rows ($data)==0){
-				 	// $query2="INSERT INTO users (name, surname, age,email,gender,username,password)
-						// 		VALUES ('$name', '$surname', '$age','$email','$gender','$ussername','$hash')";
-				  //   $data2=mysqli_query($connect,$query2);
-				    // echo $query2;die;
-				    // header('Location:../../../prova/Pindex.php');
-				    echo "Sucess";
-				 }else{
-				  	echo 'This ussername or email exists!';die;
-				 }
-		}else{
-		
-			echo 'An error happend, please check if your fields are valid!';die;
-		}
-		// mysql_close($connect);
+function registerActions() {
+	// debugger;
+	var firstname=$('#firstname').val();
+	var lastname=$('#lastname').val();
+	var email=$('#email').val();
+	var ussername=$('#ussername').val();
+	var gender=$('#gender').val();
+	var age=$('#age').val();
+	var passwd=$('#passwd').val();
+	// alert('Pass eshte'+password);
 
-?>
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(!email.match(mailformat))
+	{
+		$('#email_errors').html("Please enter a valid email!");
+		return false;
+	}else{
+		$('#email_errors').html("");
+	}
+
+		$.post("../php/register.php",{
+			firstname: firstname,
+			lastname: lastname,
+			email: email,
+			ussername: ussername,
+			gender: gender,
+			age: age,
+			passwd: passwd
+			// refresh: false
+		},function(e){
+			// alert(e);
+			if(e=='This ussername or email exists!'){
+				$('#errors').html("This ussername or email exists!");	
+			}else if(e=='An error happend, please check if your fields are valid!'){
+				$('#errors').html("An error happend, please check if your fields are valid!");
+			}else if(e=='Sucess'){
+				// alert('Here');
+				window.location.replace('../../../prova/Pindex.php');
+			}
+		});
+}
