@@ -35,7 +35,7 @@ function registerActions() {
 				$('#errors').html("An error happend, please check if your fields are valid!");
 			}else if(e=='Sucess'){
 				// alert('Here');
-				window.location.replace('../../../prova/Pindex.php');
+				window.location.replace('../../../payment/Pindex.php');
 			}
 		});
 }
