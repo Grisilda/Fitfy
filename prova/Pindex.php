@@ -33,12 +33,10 @@ include_once 'config.php';
 <div class="logo">
   <a href="https://fitfy.000webhostapp.com/index.php">
                 <img src="../img/FitLogo.png" alt="FITFY" width="100px" height="100spx"></a>
-            </div>
-<center style="margin-top: 300px"> 
-  
-	<div style="background-color: purple; width: 500px; height: 200px">
+ </div>
+<center style="margin-top: 300px">   
+<div style="background-color: purple; width: 500px; height: 200px">
 <h1 style="color: orange"> Click Buy Now to continue with payment </h1>
-
 <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" style=" width: 300px; height: 100px;">
 <input type="hidden" name="notify_url" value="<?php echo PAYPAL_NOTIFY_URL; ?>">
 <input type="hidden" name="business" value="<?php echo PAYPAL_ID; ?>">     
@@ -47,13 +45,10 @@ include_once 'config.php';
 <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="width: 270px; height: 80px">
 <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-
-
-	<div style="background-color: orange ; width:100px; height: :100px;"><a href="../user/register/html/register.html" style="color: black; text-decoration:none"><h3>Back</h3></a></div>
-
-
-</center>
+<div style="background-color: orange ; width:100px; height: :100px;"><a href="../user/register/html/register.html" style="color: black; text-decoration:none"><h3>Back</h3></a></div>
 </div>
+</center>
+
 
   </body>          
   </html>
