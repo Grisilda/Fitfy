@@ -11,6 +11,7 @@ include_once 'config.php';
  ?>
  <html>
  <head>
+ 	<title>Fitfy Paymnet</title>
  	<style type="text/css">
  	body{
   background: url('fp1.jpg'); /* The image used */
@@ -20,15 +21,7 @@ include_once 'config.php';
   background-size: cover; /* Resize the background image to cover the entire container */
 
  }
- /*.logo {
-  background:  url('../img/FitLogo.png');
-  padding: 50px;
-  margin: 1px;
-  width: 100px;
-  height: 150px;
-  background-size: auto;
-  background-repeat: no-repeat;
-}*/
+
  </style>
  </head>
 <body>
@@ -47,13 +40,17 @@ include_once 'config.php';
 <h1 style="color: orange"> Click Buy Now to continue with payment </h1>
 
 <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" style=" width: 300px; height: 100px;">
-
+<input type="hidden" name="notify_url" value="<?php echo PAYPAL_NOTIFY_URL; ?>">
 <input type="hidden" name="business" value="<?php echo PAYPAL_ID; ?>">     
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="LMXGWPR3NMMSQ">
 <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="width: 270px; height: 80px">
 <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
+
+
+	<div style="background-color: orange ; width:100px; height: :100px;"><a href="../user/register/html/register.html" style="color: black; text-decoration:none"><h3>Back</h3></a></div>
+
 
 </center>
 </div>
