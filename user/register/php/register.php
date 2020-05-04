@@ -38,6 +38,6 @@ session_start();
 		
 			echo 'An error happend, please check if your fields are valid!';die;
 		}
-		// mysql_close($connect);
+		$connect -> close();
 
 ?>
