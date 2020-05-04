@@ -22,5 +22,6 @@ session_start();
 					window.location.href='../html/logimi.html';
 				  </script>";
 		}
+		$connect -> close();
 	}
 ?>
