@@ -58,5 +58,5 @@ if(!$mail->send()){
     echo "Message sent!";
 }
 }
-			
+	$db->close();		
 ?>
