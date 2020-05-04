@@ -23,5 +23,6 @@ session_start();
 		}else{
 			echo "Please fill all the fields!";die;
 		}
+		$connect -> close();
 	
 ?>
