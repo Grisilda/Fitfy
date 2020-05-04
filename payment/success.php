@@ -77,7 +77,7 @@ session_start();
         } 
 
 } 
-
+$db->close();
  ?>
 <html>
 <head>
