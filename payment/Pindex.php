@@ -1,14 +1,4 @@
-<?php
 
-// Include configuration file
-
-include_once 'config.php'; 
-
- // Include database connection file 
-
- include_once 'dbConnect.php'; 
-
- ?>
  <html>
  <head>
  	<title>Fitfy Paymnet</title>
