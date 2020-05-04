@@ -38,7 +38,6 @@ include_once 'config.php';
 <div style="background-color: purple; width: 500px; height: 200px">
 <h1 style="color: orange"> Click Buy Now to continue with payment </h1>
 <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" style=" width: 300px; height: 100px;">
-<input type="hidden" name="notify_url" value="<?php echo PAYPAL_NOTIFY_URL; ?>">
 <input type="hidden" name="business" value="<?php echo PAYPAL_ID; ?>">     
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="LMXGWPR3NMMSQ">
