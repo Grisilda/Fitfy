@@ -1,7 +1,7 @@
 <?php
 
 //shtimi tjeter
-    $connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+    $connect=mysqli_connect('localhost','xxx','xxxx','xxxx') or die('Couldnt connect');
      
     // initilize all variable
     $params = $columns = $totalRecords = $data = array();
