@@ -29,9 +29,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/mail/SMTP.php';
 // }
 
 
-$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+$connect=mysqli_connect('localhost','xxxx','xxxx','xxxx') or die('Couldnt connect');
 $email=$_POST["email"];
-$query="Select username,password from users where email="."'$email'";
+$query="Select username,password from user where email="."'$email'"." and role = 3";
 $data=mysqli_query($connect,$query);
 while ($row = mysqli_fetch_array($data)) {
         $username=$row[0];
@@ -43,7 +43,7 @@ if(mysqli_num_rows ($data)!=0){
 	// $to = $email;
 	// $subject = "Require password"; 
 	// $message = "Please click here to restore your account: https://fitfy.000webhostapp.com/user/email/html/restoreAccount.html"; 
-	// $from = 'xxxx@gmail.com';
+	// $from = 'grixkbb@gmail.com';
 	 
 	// // Sending email
 	// if(mail($to, $subject, $message)){
@@ -59,9 +59,9 @@ if(mysqli_num_rows ($data)!=0){
 	$mail->Port = 587; // TLS only
 	$mail->SMTPSecure = 'tls'; // ssl is deprecated
 	$mail->SMTPAuth = true;
-	$mail->Username = 'xxxxx@gmail.com'; // email
-	$mail->Password = 'xxxxxx'; // password
-	$mail->setFrom('xxxxx@gmail.com', 'Fitfy Fitness'); // From email and name
+	$mail->Username = 'xxxx@gmail.com'; // email
+	$mail->Password = 'xxxx'; // password
+	$mail->setFrom('xxxx@gmail.com', 'Fitfy Fitness'); // From email and name
 	$mail->addAddress($email); // to email and name
 	$mail->Subject = 'Require password';
 	$mail->msgHTML('Hi '.$username.',
