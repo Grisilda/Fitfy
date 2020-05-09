@@ -1,6 +1,6 @@
 <?php
-	$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
-	$sqlQuery = "SELECT username,email,salary FROM coach ORDER BY salary DESC";
+	$connect=mysqli_connect('localhost','xxxx','xxxx','xxxx') or die('Couldnt connect');
+	$sqlQuery = "SELECT username,email,salary FROM user where role = 2 ORDER BY salary desc";
 
 	$result = mysqli_query($connect,$sqlQuery);
 
