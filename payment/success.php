@@ -71,8 +71,8 @@ session_start();
          $insert = $db->query("INSERT INTO payments(txn_id,payment_gross,currency_code,payment_status,start_date,end_date,username) VALUES('".$txn_id."','".$payment_gross."','".$currency_code."','".$payment_status."','".$start_date."','".$end_date."','".$username."')"); 
 
          $payment_id = $db->insert_id; 
-
-         $insert2=$db->query("INSERT INTO users (name, surname, age,email,gender,username,password) VALUES ('".$name."', '".$surname."', '".$age."','".$email."','".$gender."','".$username."','".$hash."')");
+        
+         $insert2=$db->query("INSERT INTO user (name, surname, age,email,gender,username,password,role) VALUES ('".$name."', '".$surname."', '".$age."','".$email."','".$gender."','".$username."','".$hash."',3)");
 
         } 
 
