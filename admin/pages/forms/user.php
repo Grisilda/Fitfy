@@ -1,6 +1,6 @@
 <?php
  
-$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect'); 
+$connect=mysqli_connect('localhost','xxxx','xxxx','xxxx') or die('Couldnt connect'); 
     $sqlQuery = "SELECT id,name,surname,age,email,gender,username FROM  user where role = 3";
     if(!empty($_POST["search"]["value"])){
         $sqlQuery .= ' and (name LIKE "%'.$_POST["search"]["value"].'%" ';
