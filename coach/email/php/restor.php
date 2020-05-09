@@ -20,7 +20,7 @@
 
 $connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
 $email=$_POST["email"];
-$query="Select password from coach where email="."'$email'";
+$query="Select password from user where email="."'$email'"."and role=2";
 $data=mysqli_query($connect,$query);
 while ($row = mysqli_fetch_array($data)) {
         $passwordRequire=$row[0];
