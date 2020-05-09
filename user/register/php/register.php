@@ -3,7 +3,7 @@
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 session_start();
-		$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+		$connect=mysqli_connect('localhost','xxxx','xxxx','xxxx') or die('Couldnt connect');
 		// echo $_POST["firstname"];die;
 		if($_POST["firstname"]!=null && $_POST["lastname"]!=null && $_POST["email"]!=null && $_POST["ussername"]!=null && $_POST["gender"]!=null && $_POST["age"]!=null && $_POST["passwd"]!=null){
 				 $name=$_POST["firstname"];
@@ -22,7 +22,7 @@ session_start();
 				 $hash = md5($password);
 				 $_SESSION["hash"] = $hash;
 				 // echo $hash;die;
-				 $query="Select * from users where username = "."'$ussername'"." or email = "."'$email'";
+				 $query="Select * from user where username = "."'$ussername'"." or email = "."'$email'"."and role = 3";
 				 $data=mysqli_query($connect,$query);
 				 if(mysqli_num_rows ($data)==0){
 				 	// $query2="INSERT INTO users (name, surname, age,email,gender,username,password)
