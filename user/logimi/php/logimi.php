@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-		$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+		$connect=mysqli_connect('localhost','xxxx','xxxx','xxxx') or die('Couldnt connect');
 		if($_POST["ussername"]!=null && $_POST["password"]!=null){
 			// echo "Here";
 				$name=$_POST["ussername"];
@@ -9,9 +9,9 @@ session_start();
 				$_SESSION["login"] = $name;
 				$_SESSION["password"] = $password;
 				$hash = md5($password);
-				$queryUssername="Select * from users where username="."'$name'";
+				$queryUssername="Select * from user where username="."'$name'"." and role = 3";
 				$dataUssername=mysqli_query($connect,$queryUssername);
-				$queryPassword="Select * from users where password="."'$hash'";
+				$queryPassword="Select * from user where password="."'$hash'"." and role = 3";
 				$dataPassword=mysqli_query($connect,$queryPassword);
 				if(mysqli_num_rows ($dataUssername)==0){
 					echo "Please check your credintials!";
