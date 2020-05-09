@@ -1,17 +1,17 @@
 <?php
 session_start();
 	if(isset($_POST["submit"])){
-		$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+		$connect=mysqli_connect('localhost','xxxx','xxxx','xxxx') or die('Couldnt connect');
 		if($_POST["ussername"]!=null && $_POST["password"]!=null){
 			// echo "Here";
 				$name=$_POST["ussername"];
 				$password=$_POST["password"];
 				$hash = md5($password);
-				$query="Select * from users where username="."'$name'";
+				$query="Select * from user where username="."'$name'"." and role = 3";
 
 				$data=mysqli_query($connect,$query);
 				if(mysqli_num_rows ($data)!=0){
-					$query="Update users set password="."'$hash'"." where username="."'$name'";
+					$query="Update user set password="."'$hash'"." where username="."'$name'"." and role = 3";
 					$data=mysqli_query($connect,$query);
 					header("Location: ../../logimi/html/logimi.html");
 				}else{
