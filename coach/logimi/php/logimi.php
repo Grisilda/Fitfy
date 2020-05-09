@@ -9,9 +9,9 @@ session_start();
 				$_SESSION["login"] = $name;
 				$_SESSION["password"] = $password;
 				$hash = md5($password);
-				$queryUssername="Select * from coach where username="."'$name'";
+				$queryUssername="Select * from user where username="."'$name'"."and role=2" ;
 				$dataUssername=mysqli_query($connect,$queryUssername);
-				$queryPassword="Select * from coach where password="."'$hash'";
+				$queryPassword="Select * from user where password="."'$hash'"."and role=2" ;
 				$dataPassword=mysqli_query($connect,$queryPassword);
 				setcookie ("member_login",$_POST["remember"],time()+ (10 * 365 * 24 * 60 * 60));
 				if(mysqli_num_rows ($dataUssername)==0){
