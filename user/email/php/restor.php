@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
  // Include database connection file 
 
@@ -36,6 +36,7 @@ $data=mysqli_query($connect,$query);
 while ($row = mysqli_fetch_array($data)) {
         $username=$row[0];
         $passwordRequire=$row[1];
+$_SESSION["username_email"] = $username;
 }
 // print_r($passwordRequire);die;
 
