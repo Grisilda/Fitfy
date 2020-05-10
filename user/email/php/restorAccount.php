@@ -2,9 +2,9 @@
 session_start();
 	if(isset($_POST["submit"])){
 		$connect=mysqli_connect('localhost','xxxx','xxxx','xxxx') or die('Couldnt connect');
-		if($_POST["ussername"]!=null && $_POST["password"]!=null){
+		if( $_POST["password"]!=null){
 			// echo "Here";
-				$name=$_POST["ussername"];
+				$name=$_SESSION["username_email"];
 				$password=$_POST["password"];
 				$hash = md5($password);
 				$query="Select * from user where username="."'$name'"." and role = 3";
