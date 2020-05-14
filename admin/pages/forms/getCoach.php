@@ -1,7 +1,7 @@
 <?php
 // echo $_POST['empId'];die;
 	$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect'); 
-	$id=$_POST['empId'];
+		$id=$_POST['empId'];
     $sqlQuery = "SELECT id,name,surname,age,email,gender,description,instagram,specialism,photo,username,salary FROM  coach where id = ".$id;
     // if(!empty($_POST["search"]["value"])){
     //     $sqlQuery .= 'where(name LIKE "%'.$_POST["search"]["value"].'%" ';
