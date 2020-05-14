@@ -1,7 +1,7 @@
 <?php
 
 // //shtimi tjeter
-    // $connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+    // $connect=mysqli_connect('localhost','xxxx','xxxx','id12990860_fitfydb') or die('Couldnt connect');
      
 //     // initilize all variable
 //     $params = $columns = $totalRecords = $data = array();
@@ -67,7 +67,7 @@
 //     echo json_encode($json_data);    // send data as json format
 
   
-$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect'); 
+$connect=mysqli_connect('localhost' ,'xxxx','xxxx','id12990860_fitfydb') or die('Couldnt connect'); 
     $sqlQuery = "SELECT id,name, surname, age, email,age,email,gender, description,instagram,specialism,photo,username,salary FROM  coach ";
     if(!empty($_POST["search"]["value"])){
         $sqlQuery .= 'where(name LIKE "%'.$_POST["search"]["value"].'%" ';
@@ -102,10 +102,12 @@ $connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id1299086
         $empRows[] = $employee['specialism'];
         $empRows[] = $employee['photo'];
         $empRows[] = $employee['username']; 
-        $empRows[] = $employee['salary'];                 
-        $empRows[] = '<button type="button" name="update" id="'.$employee["id"].'" class="btn btn-warning btn-xs update onclick="update('.$employee["id"].')" >Update</button>';
-        $empRows[] = '<button type="button" name="delete" id="'.$employee["id"].'" class="btn btn-danger btn-xs delete" >Delete</button>';
-        $employeeData[] = $empRows;
+        $empRows[] = $employee['salary'];   
+        $empRows[] = '<button type="button" style="width:50px; height:20px; font-size: 1.0rem;" name="update" id="'.$employee["id"].'" class="btn btn-warning btn-xs update"  onclick="update('.$employee["id"].')">Update</button>';
+        $empRows[] = '<button type="button" style="width:50px; height:20px; font-size: 1.0rem;" name="delete" id="'.$employee["id"].'" class="btn btn-danger btn-xs delete"  onclick="deleteUser('.$employee["id"].')" >Delete</button>';           
+        //$empRows[] = '<button type="button" style="width:50px; height:20px; font-size: 1.0rem;" name="update" id="'.$employee["id"].'" class="btn btn-warning btn-xs update onclick="update('.$employee["id"].')">Update</button>';
+       // $empRows[] = '<button type="button" style="width:50px; height:20px; font-size: 1.0rem;"  name="delete" id="'.$employee["id"].'" class="btn btn-danger btn-xs delete " onclick="deleteUser('.$employee["id"].')">Delete</button>';
+           $employeeData[] = $empRows;
     }
     $output = array(
         "draw"              =>  intval($_POST["draw"]),
