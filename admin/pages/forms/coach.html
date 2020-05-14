@@ -123,20 +123,20 @@
                      <table id="employee_data" class="display" > 
                         <thead>
                             <tr>
-                               <th>ID</th>
-                               <th>Name</th>
+                              <th>Id</th>
+                              <th>Name</th>
                               <th>Surname</th>
                               <th>Age</th>
                               <th>Email</th>
                               <th>Gender</th>
                               <th>Description</th>
                               <th>Instagram</th>
-                              <th>Specailsm</th>
+                              <th>Specialism</th>
                               <th>Photo</th>
-                              <th>Username</th> 
-                              <th>Salary</th>       
-                              <th style=" width: 60px">Edit</th>
-                              <th>Delete</th>        
+                              <th>Username</th>  
+                              <th>Salary</th>      
+                              <th>Edit</th>
+                              <th>Delete</th>         
                             </tr>
                         </thead>
                      </table>  
@@ -153,308 +153,295 @@
           <p id="errors" style="font-size: 13px;
     color: red;"></p>
         <div class="modal-body">
+          <div class="form-group">
+            <label for="name" class="control-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>      
+          </div>
+          <div class="form-group">
+            <label for="surname" class="control-label">Surname</label>              
+            <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname">              
+          </div>      
+          <div class="form-group">
+            <label for="age" class="control-label">Age</label>              
+            <input type="number" class="form-control"  id="age" name="age" placeholder="Age" required>             
+          </div>   
+          <div class="form-group">
+            <label for="email" class="control-label">Email</label>              
+             <input type="email" class="form-control"  id="email" name="email" placeholder="Email" required>             
+          </div>
            <div class="form-group">
-                      <label for="exampleInputName1">Name</label>
-                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
-                    </div>
-                     <div class="form-group">
-                      <label for="exampleInputSurname1">Surname</label>
-                      <input type="text" class="form-control" id="exampleInputSurname1" placeholder="Surname">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputAge1">Age</label>
-                      <input type="text" class="form-control" id="exampleInputAge1" placeholder="Age">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail3">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleSelectGender">Gender</label>
-                        <select class="form-control" id="exampleSelectGender">
-                          <option>Male</option>
-                          <option>Female</option>
-                        </select>
-                      </div>
-                    <div class="form-group">
-                      <label for="description1">Description</label>
-                      <textarea class="form-control" id="description1" rows="4"></textarea>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputInstagram1">Instagram</label>
-                      <input type="text" class="form-control" id="exampleInputInstagram1" placeholder="Instagram">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleSelectSpecialism">Specialism</label>
-                        <select class="form-control" id="exampleSelectSpecialism">
-                          <option>Yoga</option>
-                          <option>Body</option>
-                          <option>Cardio</option>
-                          <option>Crossfit</option>
-                          <option>Box</option>
-                        </select>
-                      </div>
-                    <div class="form-group">
-                      <label>File upload</label>
-                      <input type="file" name="img[]" class="file-upload-default">
-                      <div class="input-group col-xs-12">
-                        <input type="file" class="form-control" id="file" name="file" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="exampleInputUsername1">Username</label>
-                      <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
-                    </div>
-                     <div class="form-group">
-                      <label for="exampleInputSalary1">Salary</label>
-                      <input type="text" class="form-control" id="exampleInputSalary1" placeholder="Salary">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword4">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
-                    </div>
+            <label for="gender" class="control-label">Gender</label>             
+            <input type="text" class="form-control" id="gender" name="gender" placeholder="Gender">      
+          </div> 
+           <div class="form-group">
+            <label for="description" class="control-label">Description</label>             
+            <input type="text" class="form-control" id="description" name="description" placeholder="Description">      
+          </div> 
+           <div class="form-group">
+            <label for="instagram" class="control-label">Instagram</label>             
+            <input type="text" class="form-control" id="instagram" name="instagram" placeholder="Instagram">      
+          </div> 
+           <div class="form-group">
+            <label for="specialism" class="control-label">Specialism</label>             
+            <input type="text" class="form-control" id="specialism" name="specialism" placeholder="Specialism">      
+          </div> 
+          <div class="form-group">
+            <label for="username" class="control-label">Username</label>             
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username">      
+          </div> 
+           <div class="form-group">
+            <label for="salary" class="control-label">Salary</label>             
+            <input type="number" class="form-control" id="salary" name="salary" placeholder="Salary">      
+          </div>            
+        </div>
         <div class="modal-footer">
           <input type="hidden" name="empId" id="empId" />
           <input type="hidden" name="action" id="action" value="" />
-          <button type="button" name="save" id="save" class="btn btn-info" onclick="saveInfo()" >Save</button>
+          <button type="button" name="save" id="save" class="btn btn-info" onclick="saveInfo()">Save</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </form>
   </div>
 </div> 
-
-<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"></h4>
-      </div>
-      <div class="modal-body">
-        <p style="font-size: 15px;">Are you sure you want to delete the coach?</p>
-      </div>
-      <div class="modal-footer">
-        <input type="hidden" name="id" id="id" />
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="deleteAction()">Delete </button>
-      </div>
-    </div>
-  </div>
-</div>
-           </div> 
+       
+         <div class="modal fade" id="deleteModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                     <h4 class="modal-title" id="myModalLabel1"></h4>
+                  </div>
+                  <div class="modal-body">
+                     <p style="font-size: 15px;">Are you sure you want to delete the coach?</p>
+                  </div>
+                  <div class="modal-footer">
+                     <input type="hidden" name="id" id="id" />
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-primary" onclick="deleteAction()">Delete </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      
       <!-- partial -->
       <br><br>
       <!-- partial -->
       <h3> New coach? Add it to Fitfy team here:</h3>
-      <div class="main-panel">        
-        <div class="content-wrapper">
-          <div class="row">         
-            <div class="col-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Enter coach informations</h4>
-                  <form class="forms-sample" action="coach.php" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                      <label for="exampleInputName2">Name</label>
-                      <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
-                    </div>
-                     <div class="form-group">
-                      <label for="exampleInputSurname2">Surname</label>
-                      <input type="text" class="form-control" id="exampleInputSurname2" placeholder="Surname">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputAge2">Age</label>
-                      <input type="text" class="form-control" id="exampleInputAge2" placeholder="Age">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail4">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail4" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleSelectGender1">Gender</label>
-                        <select class="form-control" id="exampleSelectGender1">
-                          <option>Male</option>
-                          <option>Female</option>
-                        </select>
-                      </div>
-                    <div class="form-group">
-                      <label for="description2">Description</label>
-                      <textarea class="form-control" id="description2" rows="4"></textarea>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputInstagram2">Instagram</label>
-                      <input type="text" class="form-control" id="exampleInputInstagram2" placeholder="Instagram">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleSelectSpecialism1">Specialism</label>
-                        <select class="form-control" id="exampleSelectSpecialism1">
-                          <option>Yoga</option>
-                          <option>Body</option>
-                          <option>Cardio</option>
-                          <option>Crossfit</option>
-                          <option>Box</option>
-                        </select>
-                      </div>
-                    <div class="form-group">
-                      <label>File upload</label>
-                      <input type="file" name="img[]" class="file-upload-default">
-                      <div class="input-group col-xs-12">
-                        <input type="file" class="form-control" id="file1" name="file" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="exampleInputUsername2">Username</label>
-                      <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Username">
-                    </div>
-                     <div class="form-group">
-                      <label for="exampleInputSalary2">Salary</label>
-                      <input type="text" class="form-control" id="exampleInputSalary2" placeholder="Salary">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword5">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword5" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                    <button class="btn btn-light">Cancel</button>
-                  </form>
-                </div>
-              </div>
+      <div class="main-panel">
+         <div class="content-wrapper">
+            <div class="row">
+               <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                     <div class="card-body">
+                        <h4 class="card-title">Enter coach informations</h4>
+                        <form class="forms-sample" action="registerCoach.php" method="post" enctype="multipart/form-data">
+                           <div class="form-group">
+                              <label for="exampleInputName">Name</label>
+                              <input type="text" class="form-control" id="exampleInputName" name="name1" placeholder="Name">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputSurname">Surname</label>
+                              <input type="text" class="form-control" id="exampleInputSurname" name="surname" placeholder="Surname">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputAge">Age</label>
+                              <input type="number" class="form-control" id="exampleInputAge" name="age" placeholder="Age">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputEmail">Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail" name="email" placeholder="Email">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleSelectGender">Gender</label>
+                              <select class="form-control" name="gender" id="exampleSelectGender">
+                                 <option>Male</option>
+                                 <option>Female</option>
+                              </select>
+                           </div>
+                           <div class="form-group">
+                              <label for="description">Description</label>
+                              <textarea class="form-control" id="description" name="description" rows="4"></textarea>
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputInstagram">Instagram</label>
+                              <input type="text" class="form-control" id="exampleInputInstagram" name="instagram" placeholder="Instagram">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleSelectSpecialism">Specialism</label>
+                              <select class="form-control" id="exampleSelectSpecialism" name="specialism">
+                                 <option>Yoga</option>
+                                 <option>Body</option>
+                                 <option>Cardio</option>
+                                 <option>Crossfit</option>
+                                 <option>Box</option>
+                              </select>
+                           </div>
+                           <div class="form-group">
+                              <label>File upload</label>
+                              <input type="file" name="img[]" class="file-upload-default">
+                              <div class="input-group col-xs-12">
+                                 <input type="file" class="form-control" id="file" name="file">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputUsername">Username</label>
+                              <input type="text" class="form-control" id="exampleInputUsername" name="username" placeholder="Username">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputSalary">Salary</label>
+                              <input type="number" class="form-control" id="exampleInputSalary" name="salary" placeholder="Salary">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputPassword5">Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword" name="password" placeholder="Password">
+                           </div>
+                           <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                           <button class="btn btn-light">Cancel</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <!-- partial -->
             </div>
-          
-            
-           
-        <!-- partial -->
+            <!-- main-panel ends -->
+         </div>
       </div>
+
+            </div> 
+      <!-- partial -->
       <!-- main-panel ends -->
     </div>
 
   </div>
-
- 
- <script>  
-$( document ).ready(function getJSON() {
-
-  var employeeData = $('#employee_data').DataTable({
-                        "lengthChange": false,
-                        "processing":true,
-                        "serverSide":true,
-                        "order":[],
-                        "ajax":{
-                          url:"/admin/pages/forms/testCoach.php",
-                          type:"POST",
-                          // data:{action:'listEmployee'},
-                          dataType:"json"
-                        },
-                        "columnDefs":[
-                          {
-                            "targets":[0, 6, 7],
-                            "orderable":true,
-                          },
-                        ],
-                        "pageLength": 10
-  });
-});
-
-function update(id){
-  // alert(id);
-  var empId = id
-  // var action = 'getEmployee';
-  $.ajax({
-    url:'/admin/pages/forms/getCoach.php',
-    method:"POST",
-    data:{
-      empId:empId
-    },
-    dataType:"json",
-    success:function(data){
-      // debugger;
-      // alert(data[0][1]);
-      $('#employeeModal1').modal('show');
-      $('#empId').val(id);
-      $('#name').val(data[0][1]);
-      $('#surname').val(data[0][2]);
-      $('#age').val(data[0][3]);       
-      $('#email').val(data[0][4]);
-      $('#gender').val(data[0][5]);
-      $('#description').val(data[0][6]);
-      $('#instagram').val(data[0][7]);
-      $('#specialism').val(data[0][8]);
-      $('#photo').val(data[0][9]);
-      $('#username').val(data[0][10]);
-      $('#salary').val(data[0][11]);   
-      $('.modal-title').html("<i class='fa fa-plus'></i> Edit coach "+data[0][1]);
-      $('#action').val('updateEmployee');
-      $('#save').val('Save');
-    }
-  })
-}
-function saveInfo(){
-  var id=$( "input[name=empId]" ).val();
-  $('#errors').html();
-  // alert(id);
-  $.ajax({
-    url:'/admin/pages/forms/updateCoach.php',
-    method:"POST",
-    data:{
-      id:id,
-      name:$('#name').val(),
-      surname:$('#surname').val(),
-      age:$('#age').val(),       
-      email:$('#email').val(),
-      gender:$('#gender').val(),
-      description:$('#description').val(),
-      instagram:$('#instagram').val(),
-      specialism:$('#specialism').val(),
-      photo:$('#photo').val(),
-      username:$('#username').val(),
-      salary:$('#salary').val() 
-    },
-    // dataType:"json",
-    success:function(data){
-      // alert(data);
-        if(data=='sucess'){
-          location.reload();
-        }
-        if(data=='This username exists in another user'){
-
-          $('#errors').html('This username exists in another user');
-        }
-        if(data=='This email exists in another user'){
-
-          $('#errors').html('This email exists in another user');
-        }
-    }
-  })
-}
-
-function deleteUser(id){
-  $('#deleteModal').modal('show');
-  $('#id').val(id);
-}
-
-function deleteAction(){
-  var id=$('#id').val();
-  $.ajax({
-    url:'/admin/pages/forms/deleteCoach.php',
-    method:"POST",
-    data:{
-      id:id 
-    },
-    // dataType:"json",
-    success:function(data){
-      if(data=='sucess'){
-          location.reload();
-        }
-    }
-  })
-}
- </script>
-  <!-- <script src="../../vendors/base/vendor.bundle.base.js"></script> -->
-  <script src="../../js/off-canvas.js"></script>
-  <script src="../../js/hoverable-collapse.js"></script>
-  <script src="../../js/template.js"></script>
-  <script src="../../js/file-upload.js"></script>
-</body>
-
+      <script>  
+         $( document ).ready(function getJSON() {
+         
+           var employeeData = $('#employee_data').DataTable({
+                                 "lengthChange": false,
+                                 "processing":true,
+                                 "serverSide":true,
+                                 "order":[],
+                                 "ajax":{
+                                   url:"/admin/pages/forms/coach.php",
+                                   type:"POST",
+                                   // data:{action:'listEmployee'},
+                                   dataType:"json"
+                                 },
+                                 "columnDefs":[
+                                   {
+                                     "targets":[0, 6, 7],
+                                     "orderable":true,
+                                   },
+                                 ],
+                                 "pageLength": 15
+           });
+         });
+          debugger;
+         
+         function update(id){
+            //alert(id);
+           var empId = id
+           // var action = 'getEmployee';
+           $.ajax({
+             url:'/admin/pages/forms/getCoach.php',
+             method:"POST",
+             data:{
+               empId:empId
+             },
+             dataType:"json",
+             success:function(data){
+              
+               // alert(data[0][1]);
+               $('#employeeModal1').modal('show');
+               $('#empId').val(id);
+               $('#name').val(data[0][1]);
+               $('#surname').val(data[0][2]);
+               $('#age').val(data[0][3]);       
+               $('#email').val(data[0][4]);
+               $('#gender').val(data[0][5]);
+               $('#description').val(data[0][6]);
+               $('#instagram').val(data[0][7]);
+               $('#specialism').val(data[0][8]);
+              // $('#photo').val(data[0][9]);
+               $('#username').val(data[0][10]);
+               $('#salary').val(data[0][11]);   
+               $('.modal-title').html("<i class='fa fa-plus'></i> Edit coach "+data[0][1]);
+               $('#action').val('updateEmployee');
+               $('#save').val('Save');
+             }
+           })
+         }
+         debugger;
+         function saveInfo(){
+           var id=$( "input[name=empId]" ).val();
+           $('#errors').html();
+           // alert(id);
+           $.ajax({
+             url:'/admin/pages/forms/updateCoach.php',
+             method:"POST",
+             data:{
+               id:id,
+               name:$('#name').val(),
+               surname:$('#surname').val(),
+               age:$('#age').val(),       
+               email:$('#email').val(),
+               gender:$('#gender').val(),
+               description:$('#description').val(),
+               instagram:$('#instagram').val(),
+               specialism:$('#specialism').val(),
+               //photo:$('#photo').val(),
+               username:$('#username').val(),
+               salary:$('#salary').val() 
+             },
+             // dataType:"json",
+             success:function(data){
+               alert(data);
+                 if(data=='sucess'){
+                   location.reload();
+                 }
+                 if(data=='This username exists in another user'){
+         
+                   $('#errors').html('This username exists in another user');
+                 }
+                 if(data=='This email exists in another user'){
+         
+                   $('#errors').html('This email exists in another user');
+                 }
+             }
+           })
+         }
+         
+         function deleteUser(id){
+          debugger;
+           $('#deleteModal1').modal('show');
+           $('#id').val(id);
+         }
+         debugger;
+         
+         function deleteAction(){
+           var id=$('#id').val();
+           $.ajax({
+             url:'/admin/pages/forms/deleteCoach.php',
+             method:"POST",
+             data:{
+               id:id 
+             },
+             // dataType:"json",
+             success:function(data){
+               if(data=='sucess'){
+                   location.reload();
+                 }
+             }
+           })
+         }
+         
+          
+      </script>
+      <!-- <script src="../../vendors/base/vendor.bundle.base.js"></script> -->
+      <script src="../../js/off-canvas.js"></script>
+      <script src="../../js/hoverable-collapse.js"></script>
+      <script src="../../js/template.js"></script>
+      <script src="../../js/file-upload.js"></script>
+   </body>
 </html>
