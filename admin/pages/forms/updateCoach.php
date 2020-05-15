@@ -15,7 +15,7 @@ $id=$_POST['id'];
 	$username=$_POST['username'];
 	$salary=$_POST['salary'];
 
-	$check="SELECT id,name,surname,age,email,gender,description,instagram,specialism,username,salary FROM coach where username = '".$username."' and id != ".$id;
+	$check="SELECT id,name,surname,age,email,gender,description,instagram,specialism,username,salary FROM user where username = '".$username."' and id != '".$id."'and role=2";
 	$result1 = mysqli_query($connect, $check);
     $numRows = mysqli_num_rows($result1);
     // echo $check;die;
@@ -23,7 +23,7 @@ $id=$_POST['id'];
 		echo "This username exists in another coach";die;
     }
 
-    $check2="SELECT id,name,surname,age,email,gender,description,instagram,specialism,username,salary FROM coach where email = '".$email."' and id != ".$id;
+    $check2="SELECT id,name,surname,age,email,gender,description,instagram,specialism,username,salary FROM user where email = '".$email."' and id != '".$id."'and role=2";
 	$result2 = mysqli_query($connect, $check2);
     $numRows2 = mysqli_num_rows($result2);
     // echo $check;die;
@@ -32,7 +32,7 @@ $id=$_POST['id'];
     }
 
 	// echo $age;
-	$sqlQuery = "UPDATE coach c 
+	$sqlQuery = "UPDATE user c 
 					SET c.name='".$name."', 
 						c.surname='".$surname."',
 					    c.age=".$age.",
@@ -44,7 +44,7 @@ $id=$_POST['id'];
 					   
 					    c.username='".$username."',
 					    c.salary='".$salary."'
-					WHERE c.id=".$id;
+					WHERE c.id=".$id." and role=2";
 	 //echo $sqlQuery;die;
 		/*if (mysqli_query($connect, $sqlQuery)) {
   echo "Record updated successfully";
