@@ -7,7 +7,7 @@ $email    = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'id12990860_kizlar','grisilda123','id12990860_fitfydb');
+$db = mysqli_connect('localhost', 'xxxx','xxxx','id12990860_fitfydb');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -44,7 +44,7 @@ if (isset($_POST['reg_user'])) {
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM coach WHERE username='$username' OR email='$email' LIMIT 1";
+  $user_check_query = "SELECT * FROM user WHERE username='$username' OR email='$email' and role=2 LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
@@ -62,14 +62,14 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
     $password = md5($password_1);//encrypt the password before saving in the database
 if( in_array($imageFileType,$extensions_arr) ){
-   $query = "INSERT INTO coach (name,surname,age,email,gender,description,instagram,specialism,photo,username, password,salary) 
-          VALUES('$name','$surname','$age','$email','$gender','$description','$instagram','$specialism','$namei','$username', '$password','$salary')";
+   $query = "INSERT INTO user (name,surname,age,email,gender,description,instagram,specialism,photo,username, password,salary,role) 
+          VALUES('$name','$surname','$age','$email','$gender','$description','$instagram','$specialism','$namei','$username', '$password','$salary','2')";
     mysqli_query($db, $query)or die(mysqli_error($db));
      move_uploaded_file($_FILES['file']['tmp_name'],'upload/'.$namei);
   //    $_SESSION['username'] = $username;
     //$_SESSION['success'] = "You are now logged in";
     //echo "success";
-    echo $username;
+   // echo $username;
 }
     //header('location: index.php');
   }
