@@ -1,9 +1,11 @@
+<?php include('registerCoach.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Fitfy Fitness</title> 
   <!-- plugins:css -->
@@ -227,7 +229,7 @@
       <!-- partial -->
       <br><br>
       <!-- partial -->
-      <h3> New coach? Add it to Fitfy team here:</h3>
+      <h3 class="header" style="margin-left: 150px;"> New coach? Add it to Fitfy team here:</h3>
       <div class="main-panel">
          <div class="content-wrapper">
             <div class="row">
@@ -235,39 +237,40 @@
                   <div class="card">
                      <div class="card-body">
                         <h4 class="card-title">Enter coach informations</h4>
-                        <form class="forms-sample" action="registerCoach.php" method="post" enctype="multipart/form-data">
-                           <div class="form-group">
+                        <form  action="fitfyCoaches.php" method="post" enctype="multipart/form-data">
+                    <?php include('errors.php'); ?>
+                           <div class="input-group">
                               <label for="exampleInputName">Name</label>
-                              <input type="text" class="form-control" id="exampleInputName" name="name1" placeholder="Name">
+                              <input type="text" class="form-control" id="exampleInputName" name="name" placeholder="Name" >
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label for="exampleInputSurname">Surname</label>
                               <input type="text" class="form-control" id="exampleInputSurname" name="surname" placeholder="Surname">
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label for="exampleInputAge">Age</label>
                               <input type="number" class="form-control" id="exampleInputAge" name="age" placeholder="Age">
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label for="exampleInputEmail">Email address</label>
                               <input type="email" class="form-control" id="exampleInputEmail" name="email" placeholder="Email">
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label for="exampleSelectGender">Gender</label>
                               <select class="form-control" name="gender" id="exampleSelectGender">
                                  <option>Male</option>
                                  <option>Female</option>
                               </select>
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label for="description">Description</label>
                               <textarea class="form-control" id="description" name="description" rows="4"></textarea>
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label for="exampleInputInstagram">Instagram</label>
                               <input type="text" class="form-control" id="exampleInputInstagram" name="instagram" placeholder="Instagram">
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label for="exampleSelectSpecialism">Specialism</label>
                               <select class="form-control" id="exampleSelectSpecialism" name="specialism">
                                  <option>Yoga</option>
@@ -277,26 +280,25 @@
                                  <option>Box</option>
                               </select>
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label>File upload</label>
-                              <input type="file" name="img[]" class="file-upload-default">
                               <div class="input-group col-xs-12">
                                  <input type="file" class="form-control" id="file" name="file">
                               </div>
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label for="exampleInputUsername">Username</label>
                               <input type="text" class="form-control" id="exampleInputUsername" name="username" placeholder="Username">
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label for="exampleInputSalary">Salary</label>
                               <input type="number" class="form-control" id="exampleInputSalary" name="salary" placeholder="Salary">
                            </div>
-                           <div class="form-group">
+                           <div class="input-group">
                               <label for="exampleInputPassword5">Password</label>
                               <input type="password" class="form-control" id="exampleInputPassword" name="password" placeholder="Password">
                            </div>
-                           <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                           <button type="submit" class="btn btn-primary mr-2" name="reg_user">Submit</button>
                            <button class="btn btn-light">Cancel</button>
                         </form>
                      </div>
