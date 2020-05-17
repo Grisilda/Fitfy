@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-		$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+		$connect=mysqli_connect('localhost','xxx','xxx','xxxx') or die('Couldnt connect');
 		
 		$query="Select day,start_time,end_time,id_class,id_coach from schedule";
 		$result=[];
