@@ -40,21 +40,22 @@
             </div>
             <div class="nav-menu">
                 <nav class="mainmenu mobile-menu">
-                    <ul>
-                        <li class="active"><a href="./index.php">Home</a></li>
-                        <li><a href="./about-us.php">About</a></li>
-                        <li><a href="./schedule.php">Schedule</a></li>
-                        <li><a href="./gallery.php">Portfolio</a></li>
-                        <li><a href="./blog.php">Blog</a>
+                    <ul id='ul'>
+                        <li id='Home' class="index" value="index"><a href="./index.php">Home</a></li>
+                        <li id='About' class="about-us"><a href="./about-us.php">About</a></li>
+                        <li id='Schedule' class="schedule"><a href="./schedule.php">Schedule</a></li>
+                        <li id='Portfolio' class="gallery"><a href="./gallery.php">Portfolio</a></li>
+                        <li id='Blog' class="blog"><a href="./blog.php">Blog</a>
                             <ul class="dropdown">
-                                <li><a href="blog-details.php">Blog Details</a></li>
+                                <li id='Blog Details' class="blog-details"><a href="blog-details.php">Blog Details</a></li>
                             </ul>
                         </li>
-                        <li><a href="./contact.php">Contacts</a></li>
+                        <li id='Contacts' class="contact"><a href="./contact.php">Contacts</a></li>
                     </ul>
                 </nav>
                 <div class="nav-right search-switch">
                     <i class="ti-search"></i>
+                    
                 </div>
 <?php
     if(isset($_SESSION["login"])){
@@ -374,17 +375,17 @@
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>Our Schedule</h2>
-                        <p>Text</p>
+                        <p>Get the best from us!</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="schedule-table">
-                        <table>
+                        <table >
                             <thead>
                                 <tr>
-                                    <th></th>
+                                    <!-- <th></th> -->
                                     <th>Monday</th>
                                     <th>Tuesday</th>
                                     <th>Wednesday</th>
@@ -394,171 +395,8 @@
                                     <th>Sunday</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="workout-time">time</td>
-                                    <td class="gym">
-                                        <h6>Gym</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="yoga">
-                                        <h6>Yoga</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="body">
-                                        <h6>Body</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="cardio">
-                                        <h6>Cardio</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="workout-time">time</td>
-                                    <td></td>
-                                    <td class="running">
-                                        <h6>Running</h6>
-                                        <span>14.00 - 16.00</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="box">
-                                        <h6>Box</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="gym">
-                                        <h6>Gym</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="workout-time">time</td>
-                                    <td class="cardio">
-                                        <h6>Cardio</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="gym">
-                                        <h6>Gym</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="yoga">
-                                        <h6>Yoga</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="gym">
-                                        <h6>Gym</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="workout-time">time</td>
-                                    <td class="box g">
-                                        <h6>Box</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td class="body">
-                                        <h6>Body</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="crossfit">
-                                        <h6>Crossfit</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="cardio">
-                                        <h6>Cardio</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="workout-time">20.00</td>
-                                    <td></td>
-                                    <td class="gym">
-                                        <h6>Gym</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td class="body">
-                                        <h6>Body</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="cardio">
-                                        <h6>Cardio</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="crossfit">
-                                        <h6>Crossfit</h6>
-                                        <span>time</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                </tr>
+                            <tbody id="table">
+                                
                             </tbody>
                         </table>
                     </div>
@@ -584,25 +422,43 @@
                 <div class="row m-0">
                     <div class="col-lg-4 order-lg-1 p-0">
                         <div class="member-pic first">
-                            <img src="img/trainer/trajner_1.jpg" alt="">
+                            <?php
+                                if(isset($_SESSION["photo10"])){
+                                   echo '<img src="'.$_SESSION["photo10"].'" alt="">';       
+                                }
+                            ?>
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-2 p-0">
                         <div class="member-text">
                             <span style="font-style: oblique;font-size: 13px;">"Everything you want is on the other side of fear!"</span>
-                            <h5>Loris Morina</h5>
-                            <p>Pasioni për bodybuilding është i lindur për mua. Sporti është kulturë dhe respekt për veten. Mua më pëlqen të konkuroj dhe kjo është çfarë kam bërë në fitnes. Kombinimi i kardios dhe forcës është çelësi i trajnimit për konkurimin në disiplinën e bikini fitness. Eksperienca është çelesi drejt suksesit. Sporting Club. Asgjë nuk është e pamundur. Çdo gjë është e mundur nëse ju besoni dhe punoni fort për ta arrritur. Dream Big!</p>
+                            <?php
+                                if(isset($_SESSION["name10"])){
+                                   echo '<h5>'.$_SESSION["name10"].'</h5>';       
+                                }
+                            ?>
+                            <?php
+                                if(isset($_SESSION["description10"])){
+                                   echo '<p>'.$_SESSION["description10"].'</p>';       
+                                }
+                            ?>
                             <div class="member-social">
-                                <a href="#"><i class="ti-facebook"></i></a>
-                                <a href="#"><i class="ti-twitter-alt"></i></a>
-                                <a href="#"><i class="ti-pinterest"></i></a>
-                                <a href="#"><i class="ti-vimeo-alt"></i></a>
+                                <?php
+                                    if(isset($_SESSION["instagram10"])){
+                                       echo '<a href="'.$_SESSION["instagram10"].'"><i class="fa fa-instagram"></i></a>';       
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-3 p-0">
                         <div class="member-pic second">
-                            <img src="img/trainer/trajner_3.jpg" alt="">
+                            <?php
+                                if(isset($_SESSION["photo11"])){
+                                   echo '<img src="'.$_SESSION["photo11"].'" alt="">';       
+                                }
+                            ?>
+                            <!-- <img src="img/trainer/trajner_3.jpg" alt=""> -->
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-6 p-0">
@@ -610,31 +466,55 @@
                             <span style="font-style: oblique;font-size: 13px;">"One of the greatest moments in life is realizing that</span>
                             <span style="font-style: oblique;font-size: 13px;">two weeks ago, your body couldn't do what</span>
                             <span style="font-style: oblique;font-size: 13px;">it just did!"</span>
-                            <h5>Armir Agovi</h5>
-                            <p>Puna si instruktor nuk ka të bëjë vetëm me punën e pecs-it. Trajnuesit zotërojnë njohuritë dhe aftësitë e nevojshme për të hartuar programe të sigurta dhe efektive të fitness. Ata udhëzojnë dhe ndihmojnë njerëzit në arritjen e qëllimeve personale të shëndetit dhe të palestër.</p>
+                            <?php
+                                if(isset($_SESSION["name11"])){
+                                   echo '<h5>'.$_SESSION["name11"].'</h5>';       
+                                }
+                            ?>
+                            <?php
+                                if(isset($_SESSION["description11"])){
+                                   echo '<p>'.$_SESSION["description11"].'</p>';       
+                                }
+                            ?>
                             <div class="member-social">
-                                <a href="#"><i class="ti-facebook"></i></a>
-                                <a href="#"><i class="ti-twitter-alt"></i></a>
-                                <a href="#"><i class="ti-pinterest"></i></a>
-                                <a href="#"><i class="ti-vimeo-alt"></i></a>
+                                <?php
+                                    if(isset($_SESSION["instagram11"])){
+                                       echo '<a href="'.$_SESSION["instagram11"].'"><i class="fa fa-instagram"></i></a>';       
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-5 p-0">
                         <div class="member-pic third">
-                            <img src="img/trainer/trajner_2.jpg" alt="">
+                            <?php
+                                if(isset($_SESSION["photo12"])){
+                                   echo '<img src="'.$_SESSION["photo12"].'" alt="">';       
+                                }
+                            ?>
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-4 p-0">
                         <div class="member-text third">
                             <span style="font-style: oblique;font-size: 13px;">"Off the couch, off the carbs"</span>
-                            <h5>Arlind Selimaj</h5>
-                            <p>Unë besoj se nëse ju keni mendimin e duhur,me shumë konsistencë dhe pak sakrificë ju mund të bëheni dhe jeni në formë. Fitnesi rrit besimin dhe përqëndrimin tim dhe redukton stresin, gjë e cila më bën mua të kem performanca më të mira në çdo aspekt të jetës time. Gjithçka çfarë duhet është vendosmëri dhe guxim për të ndërmarrë hapin e parë drejt ëndrrës tuaj. Me eksperiencën e jetes time unë mund t’iu ndihmoj ta arrini atë. Ekuilibri është çelesi për një jetë të shëndetshme.</p>
+                            <?php
+                                if(isset($_SESSION["name12"])){
+                                   echo '<h5>'.$_SESSION["name12"].'</h5>';       
+                                }
+                            ?>
+                            <!-- <h5>Arlind Selimaj</h5> -->
+                            <?php
+                                if(isset($_SESSION["description12"])){
+                                   echo '<p>'.$_SESSION["description12"].'</p>';       
+                                }
+                            ?>
                             <div class="member-social">
-                                <a href="#"><i class="ti-facebook"></i></a>
-                                <a href="#"><i class="ti-twitter-alt"></i></a>
-                                <a href="#"><i class="ti-pinterest"></i></a>
-                                <a href="#"><i class="ti-vimeo-alt"></i></a>
+                                <?php
+                                    if(isset($_SESSION["instagram12"])){
+                                       echo '<a href="'.$_SESSION["instagram12"].'"><i class="fa fa-instagram"></i></a>';       
+                                    }
+                                ?>
+                                
                             </div>
                         </div>
                     </div>
@@ -838,15 +718,25 @@
         </div>
 
     </footer>
-
+    <p id="ketu" style="display: none"></p>
     <!-- Footer Section End -->
 
     <!-- Search model Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
+            <!-- <form id="searchForm" action="javascript:search();"> -->
+            <form class="search-model-form" id="searchForm" action="javascript:search();">
+               <div class="input-group">
+                  <button id="go" class="btn btn-default" type="button" 
+                          onclick="document.getElementById('searchForm').submit(); return false;">
+                  </button>
+                  <!-- <input type="text" id="searchItem" class="form-control" placeholder="Search here ..."> -->
+                  <input type="text" id="searchItem" placeholder="Search here.....">
+               </div>
+               <ul id="result" style="padding-left: 64px;;margin: 17px;">
+                        
+                    </ul>
             </form>
         </div>
     </div>
@@ -860,6 +750,34 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    $(document).ready( function() { 
+        $('#ketu').load('getCoachInfo.php'); 
+    });
+    function search() {
+        debugger;
+       var name = document.getElementById("searchForm").elements["searchItem"].value;
+       var pattern = name.toLowerCase();
+       var targetId = "";
+     
+       var divs = document.getElementsByClassName("nav-menu");
+       for (var i = 0; i < divs.length; i++) {
+          var para = divs[i].getElementsByTagName("li");
+          for (var j = 0; j < para.length; j++) {
+             var index = para[j].innerText.toLowerCase().indexOf(pattern);
+              if (index != -1) {
+                 targetId = para[j].id;
+                 var clasa=para[j].className;
+                 $("#result").empty();
+                 // $("#result").append(para[j].id);
+                 $("#result").append('<a href="https://fitfy.000webhostapp.com/'+clasa+'.php">'+targetId+'</a>');
+                 // $("#ul").append(para[j]);
+                 break;
+              }
+          }
+       }  
+    }
+    </script>
 </body>
 
 </html>
