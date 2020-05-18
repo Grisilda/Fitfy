@@ -24,6 +24,13 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -95,12 +102,12 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="filter-controls">
-                        <ul>
-                            <li class="active" data-filter=".all">All Gallery</li>
-                            <li data-filter=".fitness">Fitness</li>
-                            <li data-filter=".coaching">Coaching</li>
-                            <li data-filter=".event">Event</li>
-                            <li data-filter=".other">Other</li>
+                        <ul id="list-group  list-group-horizontal" >
+                            <li class="list-group-item active" data-filter=".all">All Gallery</li>
+                            <li class="list-group-item " data-filter=".fitness">Fitness</li>
+                            <li class="list-group-item " data-filter=".coaching">Coaching</li>
+                            <li class="list-group-item " data-filter=".event">Event</li>
+                            <li class="list-group-item " data-filter=".other">Other</li>
                         </ul>
                     </div>
                 </div>
@@ -109,89 +116,214 @@
                 <div class="col-md-8 mix all fitness">
                     <div class="gallery-item">
                         <div class="gi-img">
-                            <img src="img/gallery/gallery-1.jpg" alt="">
+                            <img src="img/gallery/fitness1.jpg" alt="">
                         </div>
                         <div class="gi-text">
-                            <h5>Sweet Berry Farm</h5>
-                            <span>Fitness, Event</span>
+                            <h5>Pamje te palestres</h5>
+                            <span>Fitfy fitness</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-lg-12 mix all coaching ">
+                            <div class="gallery-item">
+                                <div class="gi-img">
+                                    <img src="img/gallery/coa4.jpg" alt="">
+                                </div>
+                                <div class="gi-text">
+                                    <h5>ushtrime</h5>
+                                    <span>Fitfy fitness</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mix all other ">
+                            <div class="gallery-item">
+                                <div class="gi-img">
+                                    <img src="img/gallery/othe0.jpg" alt="">
+                                </div>
+                                <div class="gi-text">
+                                    <h5>Cmimet e mara</h5>
+                                    <span>Fitfy fitness</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-8 mix all fitness">
+                    <div class="gallery-item">
+                        <div class="gi-img">
+                            <img src="img/gallery/fitness3.jpg" alt="">
+                        </div>
+                        <div class="gi-text">
+                            <h5>Pamje te palestres</h5>
+                            <span>Fitfy fitness</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="row">
+                        <div class="col-lg-12 mix all coaching">
+                            <div class="gallery-item">
+                                <div class="gi-img">
+                                    <img src="img/gallery/coa13.jpg" alt="">
+                                </div>
+                                <div class="gi-text">
+                                    <h5>ushtrime</h5>
+                                    <span>Fitfy fitness</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mix all other ">
+                            <div class="gallery-item">
+                                <div class="gi-img">
+                                    <img src="img/gallery/othe3.jpeg" alt="">
+                                </div>
+                                <div class="gi-text">
+                                    <h5>cmime te mara</h5>
+                                    <span>Fitfy fitness</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 mix all fitness">
+                    <div class="gallery-item">
+                        <div class="gi-img">
+                            <img src="img/gallery/fitness4.jpg" alt="">
+                        </div>
+                        <div class="gi-text">
+                            <h5>Pamje te palestres</h5>
+                            <span>Fitfy fitness</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 mix all event">
+                    <div class="gallery-item">
+                        <div class="gi-img">
+                            <img src="img/gallery/1.png" alt="">
+                        </div>
+                        <div class="gi-text">
+                            <h5>Evente te organizuara</h5>
+                            <span>Fitfy fitness</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-7 mix all coaching ">
+                    <div class="gallery-item">
+                        <div class="gi-img">
+                            <img src="img/gallery/coa12.jpg" alt="">
+                        </div>
+                        <div class="gi-text">
+                            <h5>ushtrime</h5>
+                            <span>Fitfy fitness</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 mix all coaching ">
+                            <div class="gallery-item">
+                                <div class="gi-img">
+                                    <img src="img/gallery/coa9.jpg" alt="">
+                                </div>
+                                <div class="gi-text">
+                                    <h5>ushtrime</h5>
+                                    <span>Fitfy fitness</span>
+                                </div>
+                            </div>
+                        </div>
+
+                <div class="col-lg-8 mix all  other">
+                    <div class="gallery-item">
+                        <div class="gi-img">
+                            <img src="img/gallery/othe1.jpg" alt="">
+                        </div>
+                        <div class="gi-text">
+                            <h5>Cmime te mara</h5>
+                            <span>Fitfy fitness</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="row">
-                        <div class="col-lg-12 mix all coaching event">
+                        <div class="col-lg-12 mix all coaching ">
                             <div class="gallery-item">
                                 <div class="gi-img">
-                                    <img src="img/gallery/gallery-2.jpg" alt="">
+                                    <img src="img/gallery/coa5.jpg" alt="">
                                 </div>
                                 <div class="gi-text">
-                                    <h5>Sweet Berry Farm</h5>
-                                    <span>Fitness, Event</span>
+                                    <h5>Ushtrime</h5>
+                                    <span>Fitfy fitness</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12 mix all other fitness">
+                        <div class="col-lg-12 mix all other ">
                             <div class="gallery-item">
                                 <div class="gi-img">
-                                    <img src="img/gallery/gallery-3.jpg" alt="">
+                                    <img src="img/gallery/othe2.jpg" alt="">
                                 </div>
                                 <div class="gi-text">
-                                    <h5>Sweet Berry Farm</h5>
-                                    <span>Fitness, Event</span>
+                                    <h5>Cmime te mara</h5>
+                                    <span>Fitfy fitness</span>
                                 </div>
                             </div>
+                        </div>
+
+                    </div>
+                </div>
+
+        <div class="col-md-8 mix all fitness">
+                    <div class="gallery-item">
+                        <div class="gi-img">
+                            <img src="img/gallery/fitness10.jpg" alt="">
+                        </div>
+                        <div class="gi-text">
+                            <h5>Pamje nga palestra</h5>
+                            <span>Fitness, Event</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-md-8 mix all event">
+                    <div class="gallery-item">
+                        <div class="gi-img">
+                            <img src="img/gallery/2.png" alt="">
+                        </div>
+                        <div class="gi-text">
+                            <h5>Evente te organizuara</h5>
+                            <span>Fitfy fitness</span>
+                        </div>
+                    </div>
+                </div>
+
+
+   <div class="col-lg-7 mix all event ">
+                    <div class="gallery-item">
+                        <div class="gi-img">
+                            <img src="img/gallery/3.png" alt="">
+                        </div>
+                        <div class="gi-text">
+                            <h5>Evente te organizuara</h5>
+                            <span>Fitfy fitness</span>
+                        </div>
+                    </div>
+                </div>
+                   <div class="col-md-4">
                     <div class="row">
-                        <div class="col-lg-12 mix all coaching">
+                        <div class="col-lg-12 mix all coaching ">
                             <div class="gallery-item">
                                 <div class="gi-img">
-                                    <img src="img/gallery/gallery-4.jpg" alt="">
+                                    <img src="img/gallery/coa6.jpg" alt="">
                                 </div>
                                 <div class="gi-text">
-                                    <h5>Sweet Berry Farm</h5>
-                                    <span>Fitness, Event</span>
+                                    <h5>Ushtrime</h5>
+                                    <span>Fitfy fitness</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12 mix all other event">
-                            <div class="gallery-item">
-                                <div class="gi-img">
-                                    <img src="img/gallery/gallery-5.jpg" alt="">
-                                </div>
-                                <div class="gi-text">
-                                    <h5>Sweet Berry Farm</h5>
-                                    <span>Fitness, Event</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mix all coaching fitness">
-                    <div class="gallery-item">
-                        <div class="gi-img">
-                            <img src="img/gallery/gallery-6.jpg" alt="">
-                        </div>
-                        <div class="gi-text">
-                            <h5>Sweet Berry Farm</h5>
-                            <span>Fitness, Event</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mix all event other">
-                    <div class="gallery-item">
-                        <div class="gi-img">
-                            <img src="img/gallery/gallery-7.jpg" alt="">
-                        </div>
-                        <div class="gi-text">
-                            <h5>Sweet Berry Farm</h5>
-                            <span>Fitness, Event</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        
+            </div> 
         </div>
     </section>
     <!-- Gallery Section End -->
@@ -274,7 +406,7 @@
     <!-- Footer Section End -->
 
     <!-- Search model Begin -->
-	<div class="search-model">
+    <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch">+</div>
             <form class="search-model-form">
@@ -283,7 +415,14 @@
         </div>
     </div>
     <!-- Search model end -->
-
+<script>
+$(document).ready(function() { 
+      $('li').click(function() { 
+        $('li.list-group-item.active').removeClass("active"); 
+        $(this).addClass("active"); 
+      }); 
+    }); 
+</script>
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
