@@ -1,4 +1,4 @@
-@charset "UTF-8";
+\@charset "UTF-8";
 /******************************************************************
 Theme Name: PONIGYM
 Description: 
@@ -1314,9 +1314,13 @@ ol {
   text-transform: uppercase;
   margin-right: 54px;
   cursor: pointer;
+border-style:none;
+
 }
 .filter-controls ul li.active {
   color: #f34e3a;
+background-color:white;
+
 }
 .filter-controls ul li:last-child {
   margin-right: 0;
