@@ -1,5 +1,6 @@
-<?php include('registerCoach.php') ?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -49,6 +50,7 @@
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>+ -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="registerCoach.js"></script>
 </head>
 
 <body>
@@ -109,9 +111,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="coach.html">
+            <a class="nav-link" href="fitfyCoaches.html">
               <i class="mdi mdi-view-headline menu-icon" style="font-size: 1.5rem;"></i>
               <span class="menu-title" style="font-size: 1.5rem;">Coach informations</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="schedule.html">
+              <i class="mdi mdi-view-headline menu-icon"></i>
+              <span class="menu-title" style="font-size: 1.5rem;">Schedule</span>
             </a>
           </li>
         </ul>
@@ -237,44 +245,48 @@
                   <div class="card">
                      <div class="card-body">
                         <h4 class="card-title">Enter coach informations</h4>
-                        <form  action="fitfyCoaches.php" method="post" enctype="multipart/form-data">
-                    <?php include('errors.php'); ?>
+                        <p id="response" style="color: red;font-style: oblique;margin-top: 20px; font-size: 15px"> </p>
+                        <form  action="registerCoach.php" method="post" enctype="multipart/form-data" id="myform">
+                          
                            <div class="input-group">
                               <label for="exampleInputName">Name</label>
-                              <input type="text" class="form-control" id="exampleInputName" name="name" placeholder="Name" required>
+                              <input type="text" class="form-control" id="name1" name="name" placeholder="Name" required>
                            </div>
                            <div class="input-group">
                               <label for="exampleInputSurname">Surname</label>
-                              <input type="text" class="form-control" id="exampleInputSurname" name="surname" placeholder="Surname" required>
+                              <input type="text" class="form-control" id="surname1" name="surname" placeholder="Surname" required>
                            </div>
                            <div class="input-group">
                               <label for="exampleInputAge">Age</label>
-                              <input type="number" class="form-control" id="exampleInputAge" name="age" placeholder="Age"required
+                              <input type="number" class="form-control" id="age1" name="age" placeholder="Age"required
                            </div>
+                          
                            <div class="input-group">
                               <label for="exampleInputEmail">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail" name="email" placeholder="Email"required>
+                              
+                              <input type="email" class="form-control" id="email1" name="email" placeholder="Email"required>
+                                <p id="email_errors" style="color: red;font-style: oblique;"></p>
                            </div>
                            <div class="input-group">
                               <label for="exampleSelectGender">Gender</label>
-                              <select class="form-control" name="gender" id="exampleSelectGender"required>
+                              <select class="form-control" name="gender" id="gender1"required>
                                  <option>Male</option>
                                  <option>Female</option>
                               </select>
                            </div>
                            <div class="input-group">
                               <label for="description">Description</label>
-                              <textarea class="form-control" id="description" name="description" rows="4"required></textarea>
+                              <textarea class="form-control" id="description1" name="description" rows="4"required></textarea>
                            </div>
                            <div class="input-group">
                               <label for="exampleInputInstagram">Instagram</label>
                              
-                           <input type="url" name="instagram" id="instagram" placeholder="https://instagram.com" pattern="https://.*"required>
+                           <input type="url" name="instagram" id="instagram1" placeholder="https://instagram.com" pattern="https://.*"required>
 
                            </div>
                            <div class="input-group">
                               <label for="exampleSelectSpecialism">Specialism</label>
-                              <select class="form-control" id="exampleSelectSpecialism" name="specialism" required>
+                              <select class="form-control" id="specialism1" name="specialism" required>
                                  <option>Yoga</option>
                                  <option>Body</option>
                                  <option>Cardio</option>
@@ -290,19 +302,20 @@
                            </div>
                            <div class="input-group">
                               <label for="exampleInputUsername">Username</label>
-                              <input type="text" class="form-control" id="exampleInputUsername" name="username" placeholder="Username" required>
+                              <input type="text" class="form-control" id="username1" name="username" placeholder="Username" required>
                            </div>
                            <div class="input-group">
                               <label for="exampleInputSalary">Salary</label>
-                              <input type="number" class="form-control" id="exampleInputSalary" name="salary" placeholder="Salary" required>
+                              <input type="number" class="form-control" id="salary1" name="salary" placeholder="Salary" required>
                            </div>
                            <div class="input-group">
                               <label for="exampleInputPassword5">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword" name="password" placeholder="Password" required>
+                              <input type="password" class="form-control" id="password1" name="password" placeholder="Password" required>
                            </div>
-                           <button type="submit" class="btn btn-primary mr-2" name="reg_user">Submit</button>
-                           <button class="btn" style="background-color: #337ab7; color: white;
-"> <a href ="https://fitfy.000webhostapp.com/admin/pages/forms/fitfyCoaches.php" style="decoration:none;color: white;">Cancel</a></button>
+                           <a type="submit" class="btn btn-primary mr-2" style="height: 45px; width: 90px;font-style: initial; color: white; padding: 12px" name="reg_user" onclick="registerActions()">Submit</a>
+                           <!-- <a class="btn btn-primary" onclick="egisterActions()" style="background-color:#f34e3a;border-color:#f34e3a;">Continue to payment</a> -->
+                           <button  class="btn btn-primary mr-2" > <input type="reset" value="Cancel" style="height: 30px;background-color: #337ab7; border-color: #337ab7; font-family: initial;">
+                           </button>
                         </form>
                      </div>
                   </div>
