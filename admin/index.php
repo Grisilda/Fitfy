@@ -104,7 +104,7 @@ function myFunction(){
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/forms/fitfyCoaches.php">
+            <a class="nav-link" href="pages/forms/fitfyCoaches.html">
               <i class="mdi mdi-view-headline menu-icon"></i>
               <span class="menu-title">Coach informations</span>
             </a>
