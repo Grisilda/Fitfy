@@ -2,6 +2,11 @@
 //session_start();
 include'getUser.php';
 ?>
+<?php
+    if(!isset($_SESSION["login"])){
+       header("Location: https://fitfy.000webhostapp.com/index.php");      
+    }
+?>
 <html>
 <head>
     <title>Profile</title>
@@ -29,6 +34,18 @@ include'getUser.php';
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <link rel="stylesheet" href="styleProfile.css"> 
+   <style type="text/css">
+    input{
+        border: none;
+        display: inline;
+        font-family: inherit;
+        font-size: inherit;
+        padding:none;
+        width: auto;
+        background: transparent;
+        color: #0062cc;
+    }
+</style>
 <!------ Include the above in your HEAD tag ---------->
 </head>
 <body>
@@ -72,7 +89,7 @@ include'getUser.php';
         </div>
     </header>
 <div class="container emp-profile">
-            <form method="post">
+            <form method="post" id="myform1">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
@@ -95,17 +112,17 @@ include'getUser.php';
                                     <p class="proile-rating">RANKINGS : <span>8/10</span></p>-->
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="https://fitfy.000webhostapp.com/user_profile/userProfile.php" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="https://fitfy.000webhostapp.com/user_profile/userProfile.php" role="tab" aria-controls="home" aria-selected="true">Personal Information</a>
                                 </li>
-                              <!--  <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
-                                </li>-->
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" name="edit" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" onclick="editInfo()">Edit Profile</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-                    </div>
+                    <!-- <div class="col-md-2">
+                         <button onclick="editInfo()">Edit</button>
+                    </div> -->
                 </div>
                 <div class="row">
                     <div class="col-md-4">
@@ -126,12 +143,14 @@ include'getUser.php';
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <div class="row">
+                               <form id="myform">
+                                <p id="errors" style="font-size: 13px; color: red;"></p>
+                                       <div class="row">
                                             <div class="col-md-6">
                                                 <label>Username</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>  <?php echo $_SESSION['u_username'];?></p>
+                                                <p>  <input  class="disabled" type="text" id="username" value="<?php echo $_SESSION['u_username'];?>" disabled></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -139,7 +158,7 @@ include'getUser.php';
                                                 <label>Name</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><?php echo $_SESSION['u_name'];?></p>
+                                                <p><input  class="disabled" type="text" id="name" value="<?php echo $_SESSION['u_name'];?>"disabled></p>
                                             </div>
                                         </div>
                                          <div class="row">
@@ -147,7 +166,7 @@ include'getUser.php';
                                                 <label>Surname</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><?php echo $_SESSION['u_surname'];?></p>
+                                                <p><input class="disabled" type="text" id="surname" value="<?php echo $_SESSION['u_surname'];?>"disabled></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -155,7 +174,7 @@ include'getUser.php';
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><?php echo $_SESSION['u_email'];?></p>
+                                                <p><input class="disabled" type="email" id="email" value="<?php echo $_SESSION['u_email'];?>"disabled></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -163,7 +182,7 @@ include'getUser.php';
                                                 <label>Password</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><input type="password" style="border: none;display: inline;font-family: inherit;font-size: inherit;padding:none;width: auto;"value="<?php echo $_SESSION['password'];?>" id="pass"> <input type="checkbox" onclick="show()">Show</p>
+                                                <p><input class="disabled" type="password" style="border: none;display: inline;font-family: inherit;font-size: inherit;padding:none;width: auto;"value="<?php echo $_SESSION['password'];?>" id="pass" disabled> <input type="checkbox" onclick="show()">Show</p>
 
                                             </div>
                                         </div>
@@ -172,7 +191,7 @@ include'getUser.php';
                                                 <label>Gender</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><?php echo $_SESSION['u_gender'];?></p>
+                                                <p><input class="disabled" type="text" id="gender" value="<?php echo $_SESSION['u_gender'];?>"disabled></p>
                                             </div>
                                         </div>
                                          <div class="row">
@@ -180,13 +199,16 @@ include'getUser.php';
                                                 <label>Age</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><?php echo $_SESSION['u_age'];?></p>
+                                                <p><input class="disabled" type="number" id="age" value="<?php echo $_SESSION['u_age'];?>"disabled></p>
                                             </div>
                                         </div>
-                                        
+                                         <div class="col-md-2">
+                     <button class="profile-edit-btn" id="save" name="save" value=" Save "/ style="margin-left: 525px;width: 100px;color: green; display: none;" onclick="saveInfo()"> Save</button>
+                    </div><br>
                     <div class="col-md-2">
                      <button class="profile-edit-btn" name="btnAddMore" value=" Log Out "/ style="margin-left: 525px;width: 100px;color: purple;"> <a href="logout.php" style="color: purple; text-decoration: none;">Log Out</a></button>
                     </div>
+                </form>
                             </div>
                     
                            <!-- <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -243,6 +265,24 @@ include'getUser.php';
             </form>           
         </div>
         <script type="text/javascript">
+            $( document ).ready(function() {
+  $( "#field1" ).focus();
+});
+             $("input").focus();
+    function editInfo()
+    { //alert("hi");
+    $("username").focus();
+   document.getElementById("save").style.display="block";
+    $(".edit").addClass("tab-pane fade show active");
+    $(".edit").attr("aria-selected", "true")
+   var fields = $(".disabled");
+    fields.removeClass("disabled");
+    fields.addClass("enabled");
+    fields.removeAttr("disabled", "");
+    fields.attr("autofocus");
+   // $("username").focus();
+   // alert("hello");
+}
 
             function show() {
             var x = document.getElementById("pass");
@@ -265,7 +305,61 @@ include'getUser.php';
                 reader.readAsDataURL(input.files[0]);
             }
         }
-        </script>
+function myFunction() {
+ 
+        var el  = document.getElementById('edit');
+var frm = document.getElementById('myform');
+
+    for(var i=0; i < frm.length; i++) {
+        frm.elements[i].disabled = false;
+        
+    } 
+    frm.elements[0].focus();
+}
+
+
+function saveInfo(){
+          
+           $('#errors').html();
+           // alert(id);
+           $.ajax({
+             url:'updateUser.php',
+             method:"POST",
+             data:{
+               name:$('#name').val(),
+               surname:$('#surname').val(),
+               age:$('#age').val(),       
+               email:$('#email').val(),
+               gender:$('#gender').val(),
+              // description:$('#description').val(),
+               //instagram:$('#instagram').val(),
+              // specialism:$('#specialism').val(),
+               //photo:$('#photo').val(),
+               username:$('#username').val(),
+               password:$('#pass').val() 
+             },
+             // dataType:"json",
+             success:function(data){
+               alert(data);
+               if (data=='Password changed') {
+                alert('Password changed. You need to Log In again! ');
+                window.location.replace("https://fitfy.000webhostapp.com/user/logimi/html/logimi.html");
+               }
+                 if(data=='sucess'){
+                   location.reload();
+                 }
+                 if(data=='This username exists in another user'){
+         
+                   $('#errors').html('This username exists in another user');
+                 }
+                 if(data=='This email exists in another user'){
+         
+                   $('#errors').html('This email exists in another user');
+                 }
+             }
+           })
+         }
+</script>
 
 </body>
 </html>
