@@ -15,6 +15,6 @@ if (ini_get("session.use_cookies")) {
 if(session_destroy())
 {
 // Redirecting To Home Page
-header("Location: ../index.php");
+header("Location: ../user/logimi/html/logimi.html");
 }
 ?>
