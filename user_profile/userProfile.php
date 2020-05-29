@@ -33,6 +33,8 @@ include'getUser.php';
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
    <link rel="stylesheet" href="styleProfile.css"> 
    <style type="text/css">
     input{
@@ -48,6 +50,7 @@ include'getUser.php';
 
 </style>
 <!------ Include the above in your HEAD tag ---------->
+<script src="jquery-3.5.1.min.js"></script>
 </head>
 <body>
         <!-- Header Section Begin -->
@@ -133,7 +136,16 @@ include'getUser.php';
                     <div class="col-md-4">
                          <img src="userdata.svg" alt="User browsing" style="width: 300px;margin-top: 100px;">
                         <div class="profile-work">
-                
+                           <!-- <p>WORK LINK</p>
+                            <a href="">Website Link</a><br/>
+                            <a href="">Bootsnipp Profile</a><br/>
+                            <a href="">Bootply Profile</a>
+                            <p>SKILLS</p>
+                            <a href="">Web Designer</a><br/>
+                            <a href="">Web Developer</a><br/>
+                            <a href="">WordPress</a><br/>
+                            <a href="">WooCommerce</a><br/>
+                            <a href="">PHP, .Net</a><br/>-->
                            
                         </div>
                     </div>
@@ -200,7 +212,7 @@ include'getUser.php';
                                             </div>
                                         </div>
                                          <div class="col-md-2">
-                     <button class="profile-edit-btn" id="save" name="save" value=" Save "/ style="margin-left: 525px;width: 100px;color: green; display: none;" onclick="saveInfo()"> Save</button>
+                     <a class="profile-edit-btn" id="save" name="save" value=" Save "/ style="margin-left: 552px;width: 100px;color: green; display: none;" onclick="saveInfo()"> Save</a>
                     </div><br>
                     <div class="col-md-2">
                      <button class="profile-edit-btn" name="btnAddMore" value=" Log Out "/ style="margin-left: 525px;width: 100px;color: purple;"> <a href="logout.php" style="color: purple; text-decoration: none;">Log Out</a></button>
@@ -259,7 +271,19 @@ include'getUser.php';
                         </div>
                     </div>
                 </div>
-            </form>           
+            </form>  
+<div class="modal" id="deleteModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style=" margin-top: 123px; ">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 600px;">
+      <div class="modal-body" style="background: #cdc9f3;">
+        <p style="font-size: 21px;padding-left: 90px; color: black;">Password changed. You need to Log In again!</p>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-default" data-dismiss="modal" style="margin-right: 244px;background-color: #2d276c; color: white;" href="logout.php" >OK</a>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
         <script type="text/javascript">
             //$( document ).ready(function() {
@@ -322,7 +346,7 @@ var frm = document.getElementById('myform');
 
 
 function saveInfo(){
-          
+          debugger;
           // $('#errors').html();
            // alert(id);
            $.ajax({
@@ -344,13 +368,14 @@ function saveInfo(){
              // dataType:"json",
              success:function(data){
               // alert(data);
+              debugger;
                if (data=='Password changed') {
-                alert('Password changed. You need to Log In again! ');
-                window.location.replace("https://fitfy.000webhostapp.com/user/logimi/html/logimi.html");
+                // alert('Password changed. You need to Log In again! ');
+                $('#deleteModal12').show();
                }
                 
                  if(data=='This username exists in another user'){
-                    alert("This username exists in another user \n Please try again!");
+                    // alert("This username exists in another user \n Please try again!");
          
                    $('#errors').html('This username exists in another user');
                  }
@@ -358,7 +383,7 @@ function saveInfo(){
          
                    $('#errors').html('This email exists in another user');
                  }
-                  if(data=='sucess'){
+                if(data=='sucess'){
                    location.reload();
                  }
              }
@@ -368,4 +393,3 @@ function saveInfo(){
 
 </body>
 </html>
-
