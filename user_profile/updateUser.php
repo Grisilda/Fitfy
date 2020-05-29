@@ -70,4 +70,6 @@ $usern=$_SESSION['login'];
 	$_SESSION['login']=$username;
 
 	echo "sucess";
+
+$db->close();
 ?>
