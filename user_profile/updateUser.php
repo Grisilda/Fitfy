@@ -2,7 +2,8 @@
 session_start();
 
 	// echo $_POST['name'];die;
-	$connect=mysqli_connect('localhost','xxxx','xxxx','id12990860_fitfydb') or die('Couldnt connect'); 	
+	include'config.php';
+	include'dbConnect.php';
 	//$id=$_POST['id'];
 	$name=$_POST['name'];
 	$surname=$_POST['surname'];
