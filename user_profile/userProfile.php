@@ -45,6 +45,7 @@ include'getUser.php';
         background: transparent;
         color: #0062cc;
     }
+
 </style>
 <!------ Include the above in your HEAD tag ---------->
 </head>
@@ -94,10 +95,10 @@ include'getUser.php';
                     <div class="col-md-4">
                         <div class="profile-img">
                             <img src="profile.png" alt="profile image" style="margin-left: 5px;height: 200px" id="image"/>
-                            <div class="file btn btn-lg btn-primary">
+                           <!-- <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                <input type='file' onchange="readURL(this);" />
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -114,30 +115,26 @@ include'getUser.php';
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="https://fitfy.000webhostapp.com/user_profile/userProfile.php" role="tab" aria-controls="home" aria-selected="true">Personal Information</a>
                                 </li>
-                                <li class="nav-item">
+                                <!--<li class="nav-item">
                                     <a class="nav-link" id="profile-tab" name="edit" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" onclick="editInfo()">Edit Profile</a>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
+                    </div>
+                <div class="col-md-2">
+                     <button class="profile-edit-btn"id="edit" type="button" name="btnAddMore" value="Edit Profile"  onclick="editInfo()" style="margin-left: 15px; margin-top:65px;width: 100px;color: blue;">Edit Profile</button>
                     </div>
                     <!-- <div class="col-md-2">
                          <button onclick="editInfo()">Edit</button>
                     </div> -->
                 </div>
+
                 <div class="row">
                     <div class="col-md-4">
+                         <img src="userdata.svg" alt="User browsing" style="width: 300px;margin-top: 100px;">
                         <div class="profile-work">
-                           <!-- <p>WORK LINK</p>
-                            <a href="">Website Link</a><br/>
-                            <a href="">Bootsnipp Profile</a><br/>
-                            <a href="">Bootply Profile</a>
-                            <p>SKILLS</p>
-                            <a href="">Web Designer</a><br/>
-                            <a href="">Web Developer</a><br/>
-                            <a href="">WordPress</a><br/>
-                            <a href="">WooCommerce</a><br/>
-                            <a href="">PHP, .Net</a><br/>-->
-                            <img src="userInfo.svg" alt="User browsing" style="width: 300px">
+                
+                           
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -265,16 +262,22 @@ include'getUser.php';
             </form>           
         </div>
         <script type="text/javascript">
-            $( document ).ready(function() {
-  $( "#field1" ).focus();
-});
+            //$( document ).ready(function() {
+ // $( "#field1" ).focus();
+//});
              $("input").focus();
     function editInfo()
     { //alert("hi");
+    setTimeout(function(){
+    $("#username").filter(':visible').focus();
+}, 500);
+    document.getElementById("username").focus();
+    $("input:text").focus();
     $("username").focus();
    document.getElementById("save").style.display="block";
     $(".edit").addClass("tab-pane fade show active");
     $(".edit").attr("aria-selected", "true")
+    $("input").attr(  "border: 1px solid #cccccc;");
    var fields = $(".disabled");
     fields.removeClass("disabled");
     fields.addClass("enabled");
@@ -320,7 +323,7 @@ var frm = document.getElementById('myform');
 
 function saveInfo(){
           
-           $('#errors').html();
+          // $('#errors').html();
            // alert(id);
            $.ajax({
              url:'updateUser.php',
@@ -340,21 +343,23 @@ function saveInfo(){
              },
              // dataType:"json",
              success:function(data){
-               alert(data);
+              // alert(data);
                if (data=='Password changed') {
                 alert('Password changed. You need to Log In again! ');
                 window.location.replace("https://fitfy.000webhostapp.com/user/logimi/html/logimi.html");
                }
-                 if(data=='sucess'){
-                   location.reload();
-                 }
+                
                  if(data=='This username exists in another user'){
+                    alert("This username exists in another user \n Please try again!");
          
                    $('#errors').html('This username exists in another user');
                  }
                  if(data=='This email exists in another user'){
          
                    $('#errors').html('This email exists in another user');
+                 }
+                  if(data=='sucess'){
+                   location.reload();
                  }
              }
            })
@@ -363,3 +368,4 @@ function saveInfo(){
 
 </body>
 </html>
+
