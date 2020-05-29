@@ -1,12 +1,13 @@
 <?php
 session_start();
 
-		$connect=mysqli_connect('localhost','xxxx','xxxx','id12990860_fitfydb') or die('Couldnt connect');
+		include'config.php';
+		include'dbConnect.php';
 
 		if (isset($_SESSION["login"])) {
 			$username= $_SESSION["login"];
 			$query="select*from user where username='$username' and role=3";
-			$data= mysqli_query($connect, $query);
+			$data= mysqli_query($db, $query);
 			while ($info=mysqli_fetch_assoc($data))
 			{
 				$_SESSION["u_name"]=$info["name"];
@@ -21,3 +22,5 @@ session_start();
 		        
 			}
 		}
+	$db->close();
+?>
