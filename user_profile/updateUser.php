@@ -2,9 +2,10 @@
 session_start();
 
 	// echo $_POST['name'];die;
-	include'config.php';
-	include'dbConnect.php';
+	// include'config.php';
+	// include'dbConnect.php';
 	//$id=$_POST['id'];
+$connect=mysqli_connect('localhost','id12990860_kizlar','xxxx','xxxx') or die('Couldnt connect');
 	$name=$_POST['name'];
 	$surname=$_POST['surname'];
 	$age=$_POST['age'];
@@ -71,5 +72,5 @@ $usern=$_SESSION['login'];
 
 	echo "sucess";
 
-$db->close();
+	$connect->close();
 ?>
