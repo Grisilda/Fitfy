@@ -58,7 +58,7 @@ function getCalender($year = '',$month = '')
 						// echo $currentDate;die;
 						$eventNum = 0;
 						//Include db configuration file
-						$db=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+						$db=mysqli_connect('xxx','xxx','xxx','xxx') or die('Couldnt connect');
 						//Get number of events based on the current date
 						$result = $db->query("select start_time,end_time,user.specialism,user.name,user.surname from schedule2 inner join user on user.id=schedule2.id_coach WHERE day = '".$currentDate."'");
 						$eventNum = $result->num_rows;
@@ -186,7 +186,7 @@ function getYearList($selected = ''){
  */
 function getEvents($date = ''){
 	//Include db configuration file
-	$db=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+	$db=mysqli_connect('xxx','xxx','xxx','xxx') or die('Couldnt connect');
 	$eventListHTML = '';
 	$date = $date?$date:date("Y-m-d");
 	//Get events based on the current date
