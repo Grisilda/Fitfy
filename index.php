@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include_once('functions1.php');
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -23,6 +24,28 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link type="text/css" rel="stylesheet" href="style1.css"/>
+    <script src="jquery.min.js"></script>
+<style type="text/css">
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 50px solid #ffffff;
+    border-bottom: 25px solid transparent;
+    background-color:white;
+}
+.footercov {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 60%;
+   background-color:transparent;
+   color: white;
+   
+}
+</style>
 
 </head>
 
@@ -41,16 +64,16 @@
             <div class="nav-menu">
                 <nav class="mainmenu mobile-menu">
                     <ul id='ul'>
-                        <li id='Home' class="index" value="index"><a href="./index.php">Home</a></li>
-                        <li id='About' class="about-us"><a href="./about-us.php">About</a></li>
-                        <li id='Schedule' class="schedule"><a href="./schedule.php">Schedule</a></li>
-                        <li id='Portfolio' class="gallery"><a href="./gallery.php">Portfolio</a></li>
-                        <li id='Blog' class="blog"><a href="./blog.php">Blog</a>
+                        <li id='Home' class="active" value="index"><a href="./index.php">Kreu</a></li>
+                        <li id='About' class="about-us"><a href="./about-us.php">Rreth Nesh</a></li>
+                        <li id='Schedule' class="schedule"><a href="./schedule.php">Orari</a></li>
+                        <li id='Portfolio' class="gallery"><a href="./gallery.php">Foto</a></li>
+                       <!-- <li id='Blog' class="blog"><a href="./blog.php">Blog</a>
                             <ul class="dropdown">
                                 <li id='Blog Details' class="blog-details"><a href="blog-details.php">Blog Details</a></li>
                             </ul>
-                        </li>
-                        <li id='Contacts' class="contact"><a href="./contact.php">Contacts</a></li>
+                        </li>-->
+                        <li id='Contacts' class="contact"><a href="./contact.php">Kontaktet</a></li>
                     </ul>
                 </nav>
                 <div class="nav-right search-switch">
@@ -60,8 +83,14 @@
 <?php
     if(isset($_SESSION["login"])){
        echo '<div class="nav-right">
-       <a class="ti-user" style="color:#ffffff" href="/user/profil/profil.html"></a>
+       <a class="ti-user" style="color:#ffffff" href="user_profile/userProfile.php"></a>
         </div>';       
+    }
+    elseif (isset($_SESSION["login2"])){
+       echo '<div class="nav-right">
+       <a class="ti-user" style="color:#ffffff" href="user_profile/coachProfile.php"></a>
+        </div>'; 
+        # code...
     }
 ?>
                <!--  <div class="nav-right search-switch">
@@ -82,7 +111,7 @@
                         <h4>“Train like a beast and look like a beauty”</h4>
                         <h1>Make it <span>Shape</span></h1>
                         <?php
-                            if(!isset($_SESSION["login"])){
+                            if(!isset($_SESSION["login"]) && !isset($_SESSION["login2"])){
                                echo '<a href="/user/logimi/html/logimi.html" class="primary-btn" style="margin-right: 20px">Join Us Now</a>
                         <a href="/coach/logimi/html/logimi.html" class="primary-btn">JOIN AS COACH</a>';       
                             }
@@ -96,8 +125,12 @@
                     <div class="hero-text">
                         <h4>"Don't wish for it but Work for it"</h4>
                         <h1>Make it <span>Shape</span></h1>
-                        <a href="/user/logimi/html/logimi.html" class="primary-btn" style="margin-right: 20px">Join Us Now</a>
-                        <a href="#" class="primary-btn">JOIN AS COACH</a>
+                      <?php
+                            if(!isset($_SESSION["login"]) && !isset($_SESSION["login2"])){
+                               echo '<a href="/user/logimi/html/logimi.html" class="primary-btn" style="margin-right: 20px">Join Us Now</a>
+                        <a href="/coach/logimi/html/logimi.html" class="primary-btn">JOIN AS COACH</a>';       
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -106,8 +139,12 @@
                     <div class="hero-text">
                         <h4>"You are your only limit"</h4>
                         <h1>Make it <span>Shape</span></h1>
-                        <a href="/user/logimi/html/logimi.html" class="primary-btn" style="margin-right: 20px">Join Us Now</a>
-                        <a href="#" class="primary-btn">JOIN AS COACH</a>
+                        <?php
+                            if(!isset($_SESSION["login"]) && !isset($_SESSION["login2"])){
+                               echo '<a href="/user/logimi/html/logimi.html" class="primary-btn" style="margin-right: 20px">Join Us Now</a>
+                        <a href="/coach/logimi/html/logimi.html" class="primary-btn">JOIN AS COACH</a>';       
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -128,8 +165,8 @@
                         <div class="single-service-item">
                              <img src="img/icon-1.png" alt="">
                             <h5>Fitness</h5>
-                            <p>Transformon trupin tuaj dhe ju bën të arrini formën tuaj më të mirë. Mënyra unike për të djegur kaloritë dhe për të krijuar muskuj.
-                            <br>.
+                            <p>Fitnesi, sporti i trupit të bukur, ka pushtuar botën.Transformon trupin tuaj dhe ju bën të arrini formën tuaj më të mirë. Mënyra unike për të djegur kaloritë.
+                            <br>
                             </p>
                         </div>
                         <div class="single-service-item color-1">
@@ -141,14 +178,14 @@
                         <div class="single-service-item color-2">
                             <img src="img/icon-3.png" alt="">
                             <h5>Zumba</h5>
-                            <p>Nëse keni vendosur të digjni kalori duke u argëtuar dhe socializuar, Zumba është zgjedhja e duhur.
+                            <p>Nëse keni vendosur të digjni kalori duke u argëtuar dhe socializuar,  zumba është zgjedhja e duhur.   Zumba padyshim do të jetë një nga sportet tuaja të prefeuar.        
                             </p>
                         </div>
                         <div class="single-service-item color-3">
-                            <img src="img/icon-4.png" alt="">
+                            <img src="img/icon-4.png" alt="" style="height: 40px;">
                             <h5>3D Spininng</h5>
-                            <p>T’i japësh biçikletës nuk do të jetë aq e vështirë kur pamjet 3D projektohen përpara jush.
-                            <br>.
+                            <p>T’i japësh biçikletës nuk do të jetë aq e vështirë kur pamjet 3D projektohen përpara jush dhe trupi juaj do të arrij rezultate të sukseshme brenda pak muajsh.
+                            <br>
                             </p>
                         </div>
                     </div>
@@ -193,7 +230,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <a href="#" class="primary-btn">Shiko oraret</a>
+                            <a href="schedule.php" class="primary-btn">Shiko oraret</a>
                         </div>
                     </div>
                     <div class="row">
@@ -210,7 +247,7 @@
                                                     <div class="class-text">
                                                         <h3>FITNESS</h3>
                                                         <p>Transformon trupin tuaj dhe ju bën të arrini formën tuaj më të mirë. Mënyra unike për të djegur kaloritë dhe për të krijuar muskuj. Sezoni i verës nuk mjafton, që ju të ekspozoheni në plazh, që është motivi kryesor për shumë njerëz që të shkojnë në palestër. Krejt e kundërta, ne jemi këtu që të krijojmë një zakon të përditshëm, një ritual dhe një mënyrë jetese që ju ofron të gjithë përfitimet për një trup dhe formë të përkryer. Paisjet dhe teknologjia e tyre vjen si frymë bashkëkohore e 2017, të gjitha mundësuar për të siguruar më të mirën për trupin tuaj.</p>
-                                                        <a href="#" class="schedule-btn">View Schedule <i
+                                                        <a href="schedule.php" class="schedule-btn">Shiko oraret <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
@@ -227,7 +264,7 @@
                                                     <div class="class-text">
                                                         <h3>SPINNING WITH 3D VIEW</h3>
                                                         <p>T’i japësh biçikletës nuk do të jetë aq e vështirë kur pamjet 3D projektohen përpara jush. Atmosfera e krijuar do ju afrojë me natyrën dhe do t’ju japë energji e freski për të vazhduar më tej. Teknologjia e TechnoGym bën që ju të digjni kaloritë në mënyrën e duhur në pak kohë. Përmirëson qarkullimin e gjakut dhe redukton problemet kardiovaskulare. Gjatë klasës së Spinning ju do ndërtoni muskujt e këmbëve, por jo vetëm. Në fund përfitimet janë të mëdha jo vetëm nga ana fizike por edhe ajo emocionale dhe mendore dhe ju do ndiheni më vital se në fillim.</p>
-                                                        <a href="#" class="schedule-btn">View Schedule <i
+                                                        <a href="schedule.php" class="schedule-btn">Shiko oraret <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
@@ -244,7 +281,7 @@
                                                     <div class="class-text">
                                                         <h3>YOGA</h3>
                                                         <p>Yoga është një disiplinë që praktikon aktivitetin fizik, mendor dhe atë shpirtëror të ndërthurura bashkë. Qëllimi i klasës është që të krijojë Forcë, Vetëbesim, Harmoni në mendje dhe trupin tuaj. Ju do të keni mundësi të përmirësoni dhe rrisni fleksibilitetin dhe forcën e muskujve; përmirësoni frymëmarrjen dhe vitalitetin; rregullon dhe balancon metabolizmit; përmirëson qarkullimin e gjakut dhe performancën tuaj atletike. Sa më shumë Yoga të bëni aq më shumë reduktohen dhimbjet e shpinës, qafës dhe kokës të cilat sjellin edhe në reduktimin e stresit.</p>
-                                                        <a href="#" class="schedule-btn">View Schedule <i
+                                                        <a href="schedule.php" class="schedule-btn">Shiko oraret <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
@@ -261,7 +298,7 @@
                                                     <div class="class-text">
                                                         <h3>BOOTCAMP GT</h3>
                                                         <p>Trajnimi që ju do ndiqni përgjatë orës së BootCamp GT sjell përfitime të jashtëzakonshme për trupin tuaj. Ushtrimet zhvillohen me një intensitet të lartë në grup dhe kanë si synim rënien në peshë dhe rritjen e fuqisë trupore. Ju mund të përftoni vetë-motivim të lartë dhe rritje të humorit. Tre shtyllat kryesore të BootCamp Group Training janë: Lufton mplakjen, Lufton stresin dhe mund të digjni 500 deri 1000 kalori gjatë një ore!</p>
-                                                        <a href="#" class="schedule-btn">View Schedule <i
+                                                        <a href="schedule.php" class="schedule-btn">Shiko oraret <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
@@ -278,7 +315,7 @@
                                                     <div class="class-text">
                                                         <h3>ZUMBA</h3>
                                                         <p>Nëse keni vendosur të digjni kalori duke u argëtuar dhe socializuar, Zumba është zgjedhja e duhur. Klasa mundëson ushtrime aerobike ritmike me një intensitet të moderuar. Ajo është një ndërthurje midis klasës së fitnesit dhe kërcimit. Ju do të mund të vini në aktivitet të gjithë trupin duke rritur elasticitetin dhe rezistencën. Më shumë Zumba, më shumë përmirësim të gjendjes emocionale dhe vetëbesimit.</p>
-                                                        <a href="#" class="schedule-btn">View Schedule <i
+                                                        <a href="schedule.php" class="schedule-btn">Shiko oraret <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
@@ -295,7 +332,7 @@
                                                     <div class="class-text">
                                                         <h3>HIT TRAINING</h3>
                                                         <p>Hit Training të sfidon të bësh shumë më tepër se mendon se mundesh, por askush nuk do ju shtyjë të bëni diçka për të cilën trupi juaj nuk është gati. Gjatë seancave ju do të keni mundësi të bëni ushtrime me intensitet të lartë (15-45 min.) të cilat janë shumëdimensionale dhe variojnë për të mos u bërë të mërzitshme. Kjo klasë do ju japë më shumë motivim dhe ju mund të përdorni kohën në mënyrë eficiente. Punë në grup dhe objektivi personal janë dy pikat kryesore ku mbështetet ky lloj trajnimi duke ju dhënë kurajo për të kapërcyer barrierat. Fokusi kryesor i Hit Training është Forcë, Fuqi, Koordinim, Shpejtësi, Shkathtësi, Balancë, Saktësi dhe Durim.</p>
-                                                        <a href="#" class="schedule-btn">View Schedule <i
+                                                        <a href="schedule.php" class="schedule-btn">Shiko oraret <i
                                                                 class="fa fa-long-arrow-right"></i></a>
                                                     </div>
                                                 </div>
@@ -367,38 +404,27 @@
         </div>
     </section>
     <!-- Class Section End -->
-
     <!-- Trainer Table Schedule Section Begin -->
-    <section class="trainer-schedule set-bg spad" data-setbg="img/trainer-bg.jpg">
+    <section class="trainer-schedule set-bg spad" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Our Schedule</h2>
-                        <p>Get the best from us!</p>
+                        <hr style="margin-top: -9rem;
+                                        margin-bottom: 1rem;
+                                        border: 0;
+                                        border-top: 1px solid #f34e3a">
+                        <h2 style="color:black">Orari sipas klasave</h2>
+                        <p style="color:black">Get the best from us!</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="schedule-table">
-                        <table >
-                            <thead>
-                                <tr>
-                                    <!-- <th></th> -->
-                                    <th>Monday</th>
-                                    <th>Tuesday</th>
-                                    <th>Wednesday</th>
-                                    <th>Thursday</th>
-                                    <th>Friday</th>
-                                    <th>Saturday</th>
-                                    <th>Sunday</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table">
-                                
-                            </tbody>
-                        </table>
+                        <div id="calendar_div">
+                            <?php echo getCalender(); ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -412,10 +438,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Our Trainer</h2>
+                        <h2>Trajnerët tanë</h2>
                         <p>Our fitness experts can help you discover new training techniques.</p>
                     </div>
-                    <a href="#" class="primary-btn">View All <i class="ti-angle-double-right"></i></a>
+                    <a href="about-us.php" class="primary-btn">Shiko te gjithe <i class="ti-angle-double-right"></i></a>
                 </div>
             </div>
             <div class="team-members">
@@ -486,7 +512,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-5 p-0">
-                        <div class="member-pic third">
+                        <div class="member-pic1 third">
+                            <div class="triangle-right" style="position: absolute; margin-top: 200px; background: transparent; margin-left: -13px;"></div>
+
                             <?php
                                 if(isset($_SESSION["photo12"])){
                                    echo '<img src="'.$_SESSION["photo12"].'" alt="">';       
@@ -625,9 +653,9 @@
 
                                 <ul class="map-text">
 
-                                    <li><span>Address:</span> Qendra Olimpia, pranë Postës Nr.8 , Tiranë</li>
+                                    <li><span>Adresa:</span> Qendra Olimpia,pranë Postës Nr.8,Tiranë</li>
 
-                                    <li><span>Phone:</span> 044500333</li>
+                                    <li><span>Numri telefonit:</span>0692563038</li>
 
                                 </ul>
 
@@ -649,9 +677,9 @@
 
                                 <div class="section-title">
 
-                                    <h2>WE WANT TO HEAR FROM YOU</h2>
+                                    <h2>Ne jemi këtu për ju.</h2>
 
-                                    <p>Please fill out our form and we'll get in touch shortly.</p>
+                                    <p>Ju lutemi plotësoni formën e mëposhtme dhe stafi jonë do t'ju vi në ndihmë.</p>
 
                                 </div>
 
@@ -688,12 +716,16 @@
             <div class="container">
 
                 <div class="row">
+                    
 
                     <div class="col-lg-12">
 
                         <div class="copyright">
 
                         </div>
+                        <div class="footercov">
+                       <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank"> <img src="home.svg" style="height:50px;"></a>
+                    </div>
 
                         <div class="footer-widget">
 
