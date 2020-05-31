@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-		$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+		$connect=mysqli_connect('xxx','xxx','xxx','xxx') or die('Couldnt connect');
 		if($_POST["ussername"]!=null && $_POST["password"]!=null){
 			// echo "Here";
 				$name=$_POST["ussername"];
