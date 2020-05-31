@@ -1,5 +1,9 @@
 <?php
     session_start();
+
+    if(!isset($_SESSION["admin_name"]) && !isset($_SESSION["admin_password"])){
+       header("Location: https://fitfy.000webhostapp.com/admin/login.html");      
+    }
 ?>
 <!DOCTYPE html>
 <head>
@@ -32,7 +36,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+  
 <script>
 function myFunction(){
   // window.location.href = "../../register/html/logimi2.html";
@@ -70,11 +74,8 @@ function myFunction(){
               <span class="nav-profile-name">Admin Profile</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="mdi mdi-settings text-primary"></i>
-                Settings
-              </a>
-              <a class="dropdown-item">
+            
+              <a class="dropdown-item" href="logout.php">
                 <i class="mdi mdi-logout text-primary"></i>
                 Logout
               </a>
@@ -98,15 +99,21 @@ function myFunction(){
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/forms/user.html">
+            <a class="nav-link" href="pages/forms/user1.php">
               <i class="mdi mdi-view-headline menu-icon"></i>
               <span class="menu-title">User informations</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/forms/fitfyCoaches.html">
+            <a class="nav-link" href="pages/forms/fitfyCoaches.php">
               <i class="mdi mdi-view-headline menu-icon"></i>
               <span class="menu-title">Coach informations</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/forms/schedule1.php">
+              <i class="mdi mdi-view-headline menu-icon"></i>
+              <span class="menu-title">Schedule</span>
             </a>
           </li>
         </ul>
@@ -124,7 +131,7 @@ function myFunction(){
                     <?php
                         if(isset($_SESSION["admin_name"])){
                            echo '<div class="nav-right">
-                           <h2>Welcome back,'.$_SESSION["admin_name"].'</h2>
+                           <h2>Welcome back, '.$_SESSION["admin_name"].'</h2>
                             </div>';       
                         }
                     ?>
@@ -162,8 +169,9 @@ function myFunction(){
                             </div>
                           </div>
                         </div>
-                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                          <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
+                       <div class="d-none d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                          
+                          <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
                           <div class="d-flex flex-column justify-content-around">
                             <small class="mb-1 text-muted">Total coach</small>
                             <?php
@@ -184,20 +192,7 @@ function myFunction(){
                             ?>
                           </div>
                         </div>
-                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                          <i class="mdi mdi-download mr-3 icon-lg text-warning"></i>
-                          <div class="d-flex flex-column justify-content-around">
-                            <small class="mb-1 text-muted">Text</small>
-                            <h5 class="mr-2 mb-0">Something</h5>
-                          </div>
-                        </div>
-                        <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                          <i class="mdi mdi-flag mr-3 icon-lg text-danger"></i>
-                          <div class="d-flex flex-column justify-content-around">
-                            <small class="mb-1 text-muted">Text</small>
-                            <h5 class="mr-2 mb-0">Something</h5>
-                          </div>
-                        </div>
+                      
                       </div>
                     </div>
                     </div>
