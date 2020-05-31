@@ -3,7 +3,7 @@
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 	if(isset($_POST["submit"])){
-		$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+		$connect=mysqli_connect('xxx','xxx','xxx','xxx') or die('Couldnt connect');
 		
 		if($_POST["firstname"]!=null && $_POST["lastname"]!=null && $_POST["email"]!=null && $_POST["passwd"]!=null && $_POST["age"]!=null && $_POST["ussername"]!=null && $_POST["gender"]!=null && $_POST["description"]!=null && $_POST["instagram"]!=null && $_POST["specialism"]!=null){
 				 $name=$_POST["firstname"];
