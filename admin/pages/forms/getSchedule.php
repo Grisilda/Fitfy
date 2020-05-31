@@ -1,6 +1,6 @@
 <?php
 // echo $_POST['empId'];die;
-	$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect'); 
+	$connect=mysqli_connect('xxx','xxx','xxx','xxx') or die('Couldnt connect'); 
 	$id=$_POST['empId'];
     $sqlQuery = "SELECT schedule2.id,day,start_time,end_time,user.name as c_name,surname as c_surname,user.specialism as name
                     FROM  schedule2
