@@ -1,39 +1,35 @@
 <?php
-function slack($message, $channel)
-{
-// echo "Hereds";die;
-    $ch = curl_init("https://slack.com/api/chat.postMessage");
-    $data = http_build_query([
-        "token" => "xxxxxx",
-        "channel" => $channel, //"#mychannel",
-        "text" => $message, //"Hello, Foo-Bar channel message.",
-        "username" => "MySlackBot",
-    ]);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    $result = curl_exec($ch);
-    curl_close($ch);
-    
-    return $result;
-}
-	if (isset($_POST['name'])) {
-   	 $name = $_POST['name'];
-	}
-	if (isset($_POST['email'])) {
-   	 $email = $_POST['email'];
- 
-	}
-	if (isset($_POST['subject'])) {
-   	 $subject = $_POST['subject'];
-	}
-	if (isset($_POST['message'])) {
-   	 $message = $_POST['message'];
-	}
-	slack('The user with name '.$name.' with email '.$email.' and subject '.$subject.'.Sended this message: '.$message.'.', '#kizlar-team');
+session_start();
+
+		$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+		
+		$query="Select day,start_time,end_time,id_class,id_coach from schedule";
+		$result=[];
+		$i=0;
+		$data=mysqli_query($connect,$query);
+		while ($row = mysqli_fetch_array($data)) {
+		        $result['day'][$i]=$row[0];
+		        $result['start_time'][$i]=$row[1];
+		        $result['end_time'][$i]=$row[2];
+		        // get the name of the class
+		        $id_class=$row[3];
+		        $class_query="Select name from classes where id_class= ".$id_class;
+		        $class_data=mysqli_query($connect,$class_query);
+		        $class_row = mysqli_fetch_array($class_data);
+		        $result['class'][$i]=$class_row[0];
+		        // get the name of the trainer
+		        $id_coach=$row[4];
+		        $coach_query="Select name,surname from user where id= ".$id_coach;
+		        $coach_data=mysqli_query($connect,$coach_query);
+		        $coach_row = mysqli_fetch_array($coach_data);
+		        $result['coach_name'][$i]=$coach_row[0];
+		        $result['coach_surname'][$i]=$coach_row[1];
+
+		        $i++;
+
+		}
+		$myJSON = json_encode($result);
+		echo $myJSON;
+		$connect -> close();
 	
-	echo '<script type="text/javascript">';
-	echo 'window.location = "https://fitfy.000webhostapp.com/index.html";';
-	echo '</script>';
 ?>
