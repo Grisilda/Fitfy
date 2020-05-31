@@ -13,7 +13,6 @@ session_start();
 				$dataUssername=mysqli_query($connect,$queryUssername);
 				$queryPassword="Select * from user where password="."'$hash'"."and role=2" ;
 				$dataPassword=mysqli_query($connect,$queryPassword);
-				setcookie ("member_login",$_POST["remember"],time()+ (10 * 365 * 24 * 60 * 60));
 				if(mysqli_num_rows ($dataUssername)==0){
 					echo "Please check your credintials!";
 				}else if(mysqli_num_rows ($dataUssername)!=0 && mysqli_num_rows ($dataPassword)==0){
