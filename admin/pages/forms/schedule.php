@@ -1,6 +1,6 @@
 <?php
  
-$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect'); 
+$connect=mysqli_connect('xxx','xxx','xxx','xxx') or die('Couldnt connect'); 
     $sqlQuery = "SELECT schedule2.id,day,start_time,end_time,user.name as c_name,surname as c_surname,user.specialism as name
                     FROM  schedule2
                     inner join user on schedule2.id_coach=user.id";
