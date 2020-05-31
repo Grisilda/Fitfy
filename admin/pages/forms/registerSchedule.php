@@ -2,7 +2,7 @@
 
 
 // connect to the database
-$connect = mysqli_connect('localhost', 'id12990860_kizlar','grisilda123','id12990860_fitfydb');
+$connect = mysqli_connect('xxx', 'xxx','xxx','xxx');
 
 if ($_POST['date']!=null&& $_POST['start_time']!=null && $_POST['end_time']!=null && $_POST['coach_name']!=null && $_POST['coach_surname']!=null && $_POST['class_name']!=null) {
   
