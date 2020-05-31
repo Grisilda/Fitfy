@@ -1,6 +1,6 @@
 <?php
 	function getAllCoaches(){
-		$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+		$connect=mysqli_connect('xxx','xxx','xxx','xxx') or die('Couldnt connect');
 		
 		$query="select name,surname,description, instagram, photo , specialism from user where role=2 order by salary";
 		$i=0;
