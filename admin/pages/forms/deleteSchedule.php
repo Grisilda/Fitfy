@@ -1,5 +1,5 @@
 <?php
-	$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect'); 	
+	$connect=mysqli_connect('xxx','xxx','xxx','xxx') or die('Couldnt connect'); 	
 	$id=$_POST['id'];
 	$sqlQuery1 = "SELECT day FROM  schedule2 where id = ".$id;
 	$result1 = mysqli_query($connect, $sqlQuery1);
