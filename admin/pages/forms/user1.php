@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION["admin_name"]) && !isset($_SESSION["admin_password"])){
+       header("Location: https://fitfy.000webhostapp.com/admin/login.html");      
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +22,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="../../css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="../../images/favicon.png" />
+
   <!-- shtime per data table server -->
 <!-- Datatable CSS -->
 
@@ -43,7 +50,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>+ -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -101,15 +108,21 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="user.html">
+            <a class="nav-link" href="user1.php">
               <i class="mdi mdi-view-headline menu-icon" style="font-size: 1.5rem;"></i>
               <span class="menu-title" style="font-size: 1.5rem;">User informations</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="fitfyCoaches.html">
+            <a class="nav-link" href="fitfyCoaches.php">
               <i class="mdi mdi-view-headline menu-icon" style="font-size: 1.5rem;"></i>
               <span class="menu-title" style="font-size: 1.5rem;">Coach informations</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="schedule1.php">
+              <i class="mdi mdi-view-headline menu-icon"></i>
+              <span class="menu-title" style="font-size: 1.5rem;">Schedule</span>
             </a>
           </li>
         </ul>
