@@ -12,7 +12,7 @@ function registerActions() {
 	var instagram=$('#instagram1').val();
 	var specialism=$( '#specialism1 option:selected' ).text();
 	var salary=$('#salary1').val();
-	var file= $('#file')[0].files[0].name; 
+	// var file= $('#file')[0].files[0].name; 
 	// alert('Pass eshte'+password);
 
 	/*var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$/;
@@ -37,25 +37,25 @@ function registerActions() {
 			description:description,
 			instagram:instagram,
 			specialism:specialism,
-			file:file,
+			// file:file,
 			salary:salary
 			// refresh: false
 
 		},function(e){
 			debugger;
-			 alert(e);
+			 // alert(e);
 		//alert('here');
 			if(e=='This username or email exists!'){
-				alert('here');
+				// alert('here');
 				//debugger;
 				debugger;
 				$("#response").text("This username or email exists!");	
-				alert('here');
+				// alert('here');
 			}else if(e=='An error happend, please check if your fields are valid!'){
 				$('#response').html("An error happend, please check if your fields are valid!");
 			}else if(e=='Sucess'){
-				 alert('Here');
-				window.location.replace('fitfyCoaches.html');
+				 // alert('Here');
+				window.location.replace('fitfyCoaches.php');
 			}
 		});
 }
