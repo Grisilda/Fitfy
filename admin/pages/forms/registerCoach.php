@@ -60,7 +60,7 @@ if ($_POST['name']!=null&& $_POST['surname']!=null && $_POST['email']!=null && $
 
 }else{
     
-    echo 'An error happend, please check if your fields are valid!';die;
+    echo 'There is an error, please check if your fields are valid!';die;
 }
 $db -> close();
 
