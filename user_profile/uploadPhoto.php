@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$db = mysqli_connect('localhost', 'id12990860_kizlar','grisilda123','id12990860_fitfydb');
+	$db = mysqli_connect('localhost', 'xxxx','xxxx','id12990860_fitfydb');
 
 	$photo = $_FILES['file']['name'];
 	$target_dir = "../admin/pages/forms/upload/";
