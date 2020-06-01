@@ -5,7 +5,7 @@ session_start();
 	// include'config.php';
 	// include'dbConnect.php';
 	//$id=$_POST['id'];
-$connect=mysqli_connect('localhost','id12990860_kizlar','grisilda123','id12990860_fitfydb') or die('Couldnt connect');
+$connect=mysqli_connect('localhost','xxxx','xxxx','id12990860_fitfydb') or die('Couldnt connect');
 	$name=$_POST['name'];
 	$surname=$_POST['surname'];
 	$age=$_POST['age'];
