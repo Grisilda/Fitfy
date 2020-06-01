@@ -1,4 +1,10 @@
+<?php
+    session_start();
 
+    if(!isset($_SESSION["admin_name"]) && !isset($_SESSION["admin_password"])){
+       header("Location: https://fitfy.000webhostapp.com/admin/login.html");      
+    }
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -18,7 +24,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="../../css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="../../images/favicon.png" />
+
   <!-- shtime per data table server -->
 <!-- Datatable CSS -->
 
@@ -46,7 +52,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+ 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>+ -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -105,19 +111,19 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="user.html">
+            <a class="nav-link" href="user1.php">
               <i class="mdi mdi-view-headline menu-icon" style="font-size: 1.5rem;"></i>
               <span class="menu-title" style="font-size: 1.5rem;">User informations</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="fitfyCoaches.html">
+            <a class="nav-link" href="fitfyCoaches.php">
               <i class="mdi mdi-view-headline menu-icon" style="font-size: 1.5rem;"></i>
               <span class="menu-title" style="font-size: 1.5rem;">Coach informations</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="schedule.html">
+            <a class="nav-link" href="schedule1.php">
               <i class="mdi mdi-view-headline menu-icon"></i>
               <span class="menu-title" style="font-size: 1.5rem;">Schedule</span>
             </a>
@@ -237,9 +243,9 @@
       <!-- partial -->
       <br><br>
       <!-- partial -->
-      <h3 class="header" style="margin-left: 150px;"> New coach? Add it to Fitfy team here:</h3>
+     <h3 class="header" style="margin-left: 150px;"> New coach? Add it to Fitfy team here:</h3>
       <div class="main-panel">
-         <div class="content-wrapper">
+         <div class="content-wrapper" style="background: transparent;">
             <div class="row">
                <div class="col-12 grid-margin stretch-card">
                   <div class="card">
@@ -258,7 +264,7 @@
                            </div>
                            <div class="input-group">
                               <label for="exampleInputAge">Age</label>
-                              <input type="number" class="form-control" id="age1" name="age" placeholder="Age"required
+                              <input type="number" class="form-control" id="age1" name="age" placeholder="Age"required>
                            </div>
                           
                            <div class="input-group">
@@ -294,12 +300,12 @@
                                  <option>Box</option>
                               </select>
                            </div>
-                           <div class="input-group">
+                           <!-- <div class="input-group">
                               <label>File upload</label>
                               <div class="input-group col-xs-12">
                                  <input type="file" class="form-control" id="file" name="file" style="height: 46px; border-radius: 6px;">
                               </div>
-                           </div>
+                           </div> -->
                            <div class="input-group">
                               <label for="exampleInputUsername">Username</label>
                               <input type="text" class="form-control" id="username1" name="username" placeholder="Username" required>
@@ -314,7 +320,7 @@
                            </div>
                            <a type="submit" class="btn btn-primary mr-2" style="height: 45px; width: 90px;font-style: initial; color: white; padding: 12px" name="reg_user" onclick="registerActions()">Submit</a>
                            <!-- <a class="btn btn-primary" onclick="egisterActions()" style="background-color:#f34e3a;border-color:#f34e3a;">Continue to payment</a> -->
-                           <button  class="btn btn-primary mr-2" > <input type="reset" value="Cancel" style="height: 30px;background-color: #337ab7; border-color: #337ab7; font-family: initial;">
+                           <button  class="btn btn-primary mr-2" style="width: 95px;"> <input type="reset" value="Cancel" style="height: 30px;background-color: #337ab7; border-color: #337ab7; font-family: initial; border: none;">
                            </button>
                         </form>
                      </div>
