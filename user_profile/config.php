@@ -4,8 +4,8 @@
 
  define('DB_HOST', 'localhost'); 
 
- define('DB_USERNAME', 'id12990860_kizlar'); 
- define('DB_PASSWORD', 'grisilda123'); 
+ define('DB_USERNAME', 'xxxx'); 
+ define('DB_PASSWORD', 'xxxx'); 
 
  define('DB_NAME', 'id12990860_fitfydb'); 
 
